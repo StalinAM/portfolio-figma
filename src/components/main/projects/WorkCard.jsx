@@ -1,0 +1,70 @@
+import React from "react";
+import styled from "styled-components";
+import Work from "../../../assets/image1.png";
+const Container = styled.article`
+  border: 1px solid ${(props) => props.theme.Description};
+`;
+const ImgProject = styled.img`
+  width: 20rem;
+`;
+const Tools = styled.p`
+  padding: 0.5rem 1rem;
+  color: ${(props) => props.theme.Description};
+`;
+const Details = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-top: 1px solid ${(props) => props.theme.Description};
+`;
+const Title = styled.h3`
+  font-size: 1.5rem;
+  color: ${(props) => props.theme.Subtitle};
+`;
+const Description = styled.p`
+  font-size: 1rem;
+  font-weight: 400;
+  color: ${(props) => props.theme.Description};
+`;
+const BtnC = styled.div`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+`;
+const LiveBtn = styled.a`
+  display: flex;
+  gap: 0.5rem;
+  border: 1px solid ${(props) => props.theme.Title};
+  padding: 0.5rem 1rem;
+  color: ${(props) => props.theme.Subtitle};
+`;
+const Arrow = styled.i`
+  font-size: 1rem;
+`;
+const IconGit = styled.a`
+  font-size: 2.1rem;
+  color: ${(props) => props.theme.Description};
+`;
+function WorkCard() {
+  return (
+    <Container>
+      <ImgProject src={Work} />
+      <Tools>HTML SCSS Python Flask</Tools>
+      <Details>
+        <Title>ChertNodes</Title>
+        <Description>Minecraft servers hosting</Description>
+        <BtnC>
+          <LiveBtn href="">
+            Live<Arrow className="uil uil-arrow-right"></Arrow>
+          </LiveBtn>
+          <IconGit href="">
+            <i className="uil uil-github"></i>
+          </IconGit>
+        </BtnC>
+      </Details>
+    </Container>
+  );
+}
+
+export default WorkCard;
