@@ -1,17 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Title from "../../subComponents/Title";
-import WorkCard from "./WorkCard";
 import { Link } from "react-router-dom";
 import { Container } from "../../subComponents/Container";
-const Content = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  justify-items: center;
-  max-width: ${(props) => props.theme.WidthSection};
-  margin: 3rem auto;
-  gap: 2rem;
-`;
+import BoxCardWork from "../../pages/allProjects/BoxCardWork";
+import { projectsData } from "../../pages/allProjects/data";
+
+
 const Arrow = styled.i``;
 const ViewAll = styled(Link)`
   margin: 0 auto;
@@ -30,14 +25,13 @@ const ViewAll = styled(Link)`
   }
 `;
 function Projects() {
+  const listProjects = projectsData
+    .filter((item) => item.category == "complete")
+    .slice(-3);
   return (
     <Container id="projects">
       <Title title="projects" />
-      <Content>
-        <WorkCard />
-        <WorkCard />
-        <WorkCard />
-      </Content>
+      <BoxCardWork listProjects = {listProjects} />
       <ViewAll to="/all-projects">
         View all<Arrow className="uil uil-arrow-right"></Arrow>
       </ViewAll>

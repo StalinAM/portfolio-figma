@@ -15,7 +15,7 @@ const Line = styled.div`
   left: 0.8rem;
   width: 2px;
   height: 8rem;
-  background-color: ${(props) => props.theme.Description};
+  background-color: ${(props) => props.theme.Title};
 `;
 const Icon = styled.a`
   font-size: 1.6rem;

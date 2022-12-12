@@ -1,14 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import Work from "../../../assets/image1.png";
-const Container = styled.article`
+const Container = styled.li`
   border: 1px solid ${(props) => props.theme.Description};
 `;
 const ImgProject = styled.img`
   width: 20rem;
 `;
-const Tools = styled.p`
+const BoxTools = styled.ul`
+  display: flex;
+  border-top: 1px solid ${(props) => props.theme.Description};
+  gap: 0.5rem;
   padding: 0.5rem 1rem;
+`;
+const Tools = styled.li`
   color: ${(props) => props.theme.Description};
 `;
 const Details = styled.div`
@@ -16,7 +21,6 @@ const Details = styled.div`
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
-  border-top: 1px solid ${(props) => props.theme.Description};
 `;
 const Title = styled.h3`
   font-size: 1.5rem;
@@ -56,23 +60,27 @@ const IconGit = styled.a`
     color: ${(props) => props.theme.Subtitle};
   }
 `;
-function WorkCard() {
+function WorkCard({ id, image, title, description, web, tools, github }) {
   return (
-    <Container>
-      <ImgProject src={Work} />
-      <Tools>HTML SCSS Python Flask</Tools>
+    <Container key={id}>
+      <ImgProject src={image} />
       <Details>
-        <Title>ChertNodes</Title>
-        <Description>Minecraft servers hosting</Description>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
         <BtnC>
-          <LiveBtn href="#">
+          <LiveBtn href={web} target="_blank">
             Live<Arrow className="uil uil-arrow-right"></Arrow>
           </LiveBtn>
-          <IconGit href="#">
+          <IconGit href={github} target="_blank">
             <i className="uil uil-github"></i>
           </IconGit>
         </BtnC>
       </Details>
+      <BoxTools>
+        {tools.map((item, index) => (
+          <Tools key={index}>{item}</Tools>
+        ))}
+      </BoxTools>
     </Container>
   );
 }

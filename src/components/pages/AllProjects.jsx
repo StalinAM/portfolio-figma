@@ -1,17 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { MainContainer } from "../subComponents/Container";
-import SectionP from "./SectionP";
+import { projectsData } from "./allProjects/data";
+import HeaderP from "./allProjects/HeaderP";
+import SectionP from "./allProjects/SectionP";
 
 function AllProjects() {
+  const smallProjects = projectsData.filter((item) => item.category == "small");
+  const completeProjects = projectsData.filter(
+    (item) => item.category == "complete"
+  );
   return (
     <>
-      <header>
-        <Link to="/">Back</Link>
-      </header>
+      <HeaderP />
       <MainContainer>
-        <SectionP title="complete-apps" />
-        <SectionP title="all-projects" />
+        <SectionP title="complete-apps" listProjects={completeProjects} />
+        <SectionP title="small-projects" listProjects={smallProjects} />
       </MainContainer>
     </>
   );

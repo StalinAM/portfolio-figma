@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Container } from "../subComponents/Container";
+import { Container } from "../../subComponents/Container";
+import BoxCardWork from "./BoxCardWork";
 
 const Title = styled.h2`
   font-size: 2rem;
@@ -16,14 +17,15 @@ const List = styled.ul`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
 `;
-function SectionP({ title }) {
+
+function SectionP({ title, listProjects }) {
   return (
     <Container>
       <Title>
         <TitleSpan>#</TitleSpan>
         {title}
       </Title>
-      <List></List>
+      <BoxCardWork listProjects={listProjects} />
     </Container>
   );
 }

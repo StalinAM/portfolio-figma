@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import About from "./about/About";
 import Contact from "./contact/Contact";
 import Home from "./home/Home";
