@@ -2,25 +2,23 @@ import React from "react";
 import styled from "styled-components";
 import Title from "../../subComponents/Title";
 import FormContact from "./FormContact";
-const Container = styled.section`
-  padding: 6rem 0 2rem;
-`;
+import {Container} from '../../subComponents/Container'
 const Content = styled.div`
   max-width: ${(props) => props.theme.WidthSection};
   margin: 3rem auto 0;
   display: grid;
   justify-items: center;
-  align-items: center;
+  align-items: start;
   grid-template-columns: repeat(2, 1fr);
 `;
 const Text = styled.p`
   font-size: 1rem;
   color: ${(props) => props.theme.Description};
 `;
-const BoxMessage = styled.form``;
+
 function Contact() {
   return (
-    <Container>
+    <Container id="contact">
       <Title title="contact" />
       <Content>
         <Text>

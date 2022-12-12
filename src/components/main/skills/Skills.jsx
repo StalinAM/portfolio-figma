@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Title from "../../subComponents/Title";
 import CardSkill from "./CardSkill";
-const Container = styled.section`
-  padding: 6rem 0 2rem;
-`;
+import { Container } from "../../subComponents/Container";
 const Content = styled.div`
   display: grid;
   grid-template-columns: 0.7fr 1.3fr;

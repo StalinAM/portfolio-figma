@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Title from "../../subComponents/Title";
 import imageHome from "../../../assets/about.png";
-const Container = styled.section`
-  padding: 6rem 0 2rem;
-`;
+import { Container } from "../../subComponents/Container";
+
 const Content = styled.div`
   max-width: ${(props) => props.theme.WidthSection};
   margin: 3rem auto 0;
@@ -23,6 +22,7 @@ const Left = styled.div`
   gap: 1rem;
   align-items: flex-start;
 `;
+const Arrow = styled.i``;
 const Btn = styled.a`
   display: flex;
   gap: 0.5rem;
@@ -31,6 +31,12 @@ const Btn = styled.a`
   font-weight: 500;
   border: 1px solid ${(props) => props.theme.Title};
   padding: 0.5rem 1rem;
+  &:hover {
+    background-color: ${(props) => props.theme.Hover};
+  }
+  &:hover ${Arrow} {
+    transform: translate(0.25rem);
+  }
 `;
 const ImageHome = styled.img`
   width: 70%;
@@ -54,7 +60,7 @@ function About() {
             newest technologies and frameworks.
           </Text>
           <Btn>
-            Read more<i className="uil uil-arrow-right"></i>
+            Read more<Arrow className="uil uil-arrow-right"></Arrow>
           </Btn>
         </Left>
         <ImageHome src={imageHome} />

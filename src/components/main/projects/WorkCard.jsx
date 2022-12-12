@@ -32,19 +32,29 @@ const BtnC = styled.div`
   gap: 1rem;
   align-items: center;
 `;
+const Arrow = styled.i`
+  font-size: 1rem;
+`;
 const LiveBtn = styled.a`
   display: flex;
   gap: 0.5rem;
   border: 1px solid ${(props) => props.theme.Title};
   padding: 0.5rem 1rem;
   color: ${(props) => props.theme.Subtitle};
+  &:hover {
+    background-color: ${(props) => props.theme.Hover};
+  }
+  &:hover ${Arrow} {
+    transform: translate(0.25rem);
+  }
 `;
-const Arrow = styled.i`
-  font-size: 1rem;
-`;
+
 const IconGit = styled.a`
   font-size: 2.1rem;
   color: ${(props) => props.theme.Description};
+  &:hover {
+    color: ${(props) => props.theme.Subtitle};
+  }
 `;
 function WorkCard() {
   return (
@@ -55,10 +65,10 @@ function WorkCard() {
         <Title>ChertNodes</Title>
         <Description>Minecraft servers hosting</Description>
         <BtnC>
-          <LiveBtn href="">
+          <LiveBtn href="#">
             Live<Arrow className="uil uil-arrow-right"></Arrow>
           </LiveBtn>
-          <IconGit href="">
+          <IconGit href="#">
             <i className="uil uil-github"></i>
           </IconGit>
         </BtnC>

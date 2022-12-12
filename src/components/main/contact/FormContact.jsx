@@ -44,6 +44,9 @@ const ButtomForm = styled.button`
   font-weight: 500;
   border: 1px solid ${(props) => props.theme.Title};
   font-family: "Fira Code", monospace;
+  &:hover {
+    background-color: ${(props) => props.theme.Hover};
+  }
 `;
 function FormContact() {
   const form = useRef();

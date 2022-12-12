@@ -4,14 +4,12 @@ import logo from "../../assets/logo.svg";
 import items from "./items";
 
 const HeaderC = styled.header`
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 100;
+  padding: 0 2.5rem;
 `;
+
 const Nav = styled.nav`
   max-width: ${(props) => props.theme.WidthSection};
-  height: 4.5rem;
+  height: 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,13 +17,13 @@ const Nav = styled.nav`
   margin: 0 auto;
 `;
 const LogoImg = styled.img`
-  width: 2rem;
+  width: 3rem;
 `;
 const List = styled.ul`
   display: flex;
   gap: 2rem;
 `;
-const Link = styled.a`
+const Links = styled.a`
   font-size: 1.2rem;
   color: ${(props) => props.theme.Description};
   &:hover {
@@ -43,10 +41,10 @@ export const Header = (props) => {
         <List>
           {items.map((item) => (
             <li key={item.id}>
-              <Link href={item.link}>
+              <Links href={item.link}>
                 <Icon>#</Icon>
                 {item.title}
-              </Link>
+              </Links>
             </li>
           ))}
         </List>

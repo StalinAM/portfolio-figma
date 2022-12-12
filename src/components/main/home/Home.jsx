@@ -1,13 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import DataPerson from "./DataPerson";
-import Social from "./Social";
 import imageHome from "../../../assets/home.png";
-
-const Container = styled.section`
-  padding: 6rem 0 2rem;
-  position: relative;
-`;
+import { Container } from "../../subComponents/Container";
 const Content = styled.article`
   max-width: ${(props) => props.theme.WidthSection};
   margin: 0 auto;
@@ -21,10 +16,9 @@ const ImageHome = styled.img`
 function Home() {
   return (
     <Container id="home">
-      <Social />
       <Content>
         <DataPerson />
-        <ImageHome src={imageHome}/>
+        <ImageHome src={imageHome} />
       </Content>
     </Container>
   );

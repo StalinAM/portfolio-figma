@@ -21,6 +21,9 @@ const Btn = styled.a`
   font-weight: 500;
   border: 1px solid ${(props) => props.theme.Title};
   padding: 0.5rem 1rem;
+  &:hover {
+    background-color: ${(props) => props.theme.Hover};
+  }
 `;
 const TitleSpan = styled.span`
   color: ${(props) => props.theme.Title};
