@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Work from "../../../assets/image1.png";
 const Container = styled.li`
   border: 1px solid ${(props) => props.theme.Description};
 `;
 const ImgProject = styled.img`
-  width: 20rem;
+  width: 100%;
 `;
 const BoxTools = styled.ul`
   display: flex;

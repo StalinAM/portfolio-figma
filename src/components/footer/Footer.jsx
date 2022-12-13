@@ -3,6 +3,15 @@ import styled from "styled-components";
 
 const Container = styled.footer`
   padding: 2rem 9rem;
+  @media screen and (max-width: 1080px) {
+    padding: 2rem 6rem;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 2rem 3rem;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 2rem 1.5rem;
+  }
 `;
 const Content = styled.div`
   max-width: ${(props) => props.theme.WidthSection};
@@ -18,6 +27,23 @@ const Logo = styled.h2`
   font-size: 2rem;
   color: ${(props) => props.theme.Subtitle};
 `;
+const ListIcons = styled.ul`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    gap: 0.5rem;
+  }
+`;
+const IconC = styled.li`
+  color: ${(props) => props.theme.Description};
+`;
+const Icon = styled.a`
+  font-size: 1.6rem;
+  color: ${(props) => props.theme.Description};
+  &:hover {
+    color: ${(props) => props.theme.Subtitle};
+  }
+`;
 const Copyright = styled.p`
   color: ${(props) => props.theme.Description};
 `;
@@ -26,6 +52,21 @@ function Footer() {
     <Container>
       <Content>
         <Logo>SVAM</Logo>
+        <ListIcons>
+          <IconC>
+            <Icon
+              href="https://www.linkedin.com/in/stalin-acurio-915561248/"
+              target="_blank"
+            >
+              <i className="uil uil-linkedin"></i>
+            </Icon>
+          </IconC>
+          <IconC>
+            <Icon href="https://github.com/StalinAM" target="_blank">
+              <i className="uil uil-github"></i>
+            </Icon>
+          </IconC>
+        </ListIcons>
         <Copyright>© SVAM. All rigths reserved</Copyright>
       </Content>
     </Container>

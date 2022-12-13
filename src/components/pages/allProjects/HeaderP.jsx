@@ -6,6 +6,18 @@ const Container = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 5rem 9rem 0;
+  @media screen and (max-width: 1080px) {
+    padding: 5rem 6rem 0;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 5rem 3rem 0;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 5rem 1.5rem 0;
+    flex-direction: column-reverse;
+    gap: 3rem;
+    align-items: flex-start;
+  }
 `;
 const Title = styled.h1`
   color: ${(props) => props.theme.Subtitle};

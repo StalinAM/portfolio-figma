@@ -9,6 +9,12 @@ const Container = styled.div`
   grid-template-columns: max-content;
   gap: 1rem;
   z-index: 100;
+  @media screen and (max-width: 1080px) {
+    left: 1.25rem;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 const Line = styled.div`
   position: relative;

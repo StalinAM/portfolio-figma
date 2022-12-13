@@ -11,6 +11,9 @@ const Content = styled.div`
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 const Text = styled.p`
   font-size: 1rem;

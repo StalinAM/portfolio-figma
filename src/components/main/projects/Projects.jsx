@@ -6,7 +6,6 @@ import { Container } from "../../subComponents/Container";
 import BoxCardWork from "../../pages/allProjects/BoxCardWork";
 import { projectsData } from "../../pages/allProjects/data";
 
-
 const Arrow = styled.i``;
 const ViewAll = styled(Link)`
   margin: 0 auto;

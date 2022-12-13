@@ -9,6 +9,9 @@ const Content = styled.ul`
   max-width: ${(props) => props.theme.WidthSection};
   margin: 3rem auto;
   gap: 2rem;
+  @media screen and (max-width: 1080px) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 `;
 function BoxCardWork({ listProjects }) {
   return (
