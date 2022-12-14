@@ -3,33 +3,24 @@ import styled from "styled-components";
 import Title from "../../subComponents/Title";
 import CardSkill from "./CardSkill";
 import { Container } from "../../subComponents/Container";
+import { frontend, backend } from "../../data";
 const Content = styled.div`
   display: grid;
-  grid-template-columns: 0.7fr 1.3fr;
+  grid-template-columns: repeat(2, 1fr);
   max-width: ${(props) => props.theme.WidthSection};
   margin: 3rem auto 0;
   gap: 2rem;
-`;
-const Right = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 1rem;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 function Skills() {
   return (
     <Container id="skills">
       <Title title="skills" />
       <Content>
-        <div></div>
-        <Right>
-          <CardSkill title="Lenguages" />
-          <CardSkill title="Databases" />
-          <CardSkill title="Tools" />
-          <CardSkill title="Others" />
-          <CardSkill title="Framworks" />
-        </Right>
+        <CardSkill title="Frontend" listSkills={frontend} />
+        <CardSkill title="Backend" listSkills={backend} />
       </Content>
     </Container>
   );

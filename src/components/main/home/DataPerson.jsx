@@ -32,13 +32,11 @@ function DataPerson() {
   return (
     <Info>
       <Title>
-        Elias is a <TitleSpan>web designer</TitleSpan> and{" "}
-        <TitleSpan>front-end developer</TitleSpan>
+        Hi, my name is <TitleSpan>Stalin</TitleSpan> and I'am 
+        <TitleSpan> front-end developer</TitleSpan>
       </Title>
-      <Description>
-        We crafts reponsive websites where technologies meet creativity
-      </Description>
-      <Btn href="#contact">Contact me!!</Btn>
+      <Description>I have a passion for software development.</Description>
+      <Btn href="#contact">Contact me!</Btn>
     </Info>
   );
 }

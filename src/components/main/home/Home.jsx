@@ -21,7 +21,7 @@ function Home() {
     <Container id="home">
       <Content>
         <DataPerson />
-        <ImageHome src={imageHome} />
+        <ImageHome src={imageHome} alt="illustration of Stalin who is in front of a laptop where he programs"/>
       </Content>
     </Container>
   );

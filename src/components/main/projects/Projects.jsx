@@ -4,7 +4,7 @@ import Title from "../../subComponents/Title";
 import { Link } from "react-router-dom";
 import { Container } from "../../subComponents/Container";
 import BoxCardWork from "../../pages/allProjects/BoxCardWork";
-import { projectsData } from "../../pages/allProjects/data";
+import { projectsData } from "../../data";
 
 const Arrow = styled.i``;
 const ViewAll = styled(Link)`

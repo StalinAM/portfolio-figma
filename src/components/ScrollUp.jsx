@@ -9,18 +9,16 @@ const Scroll = styled.a`
   border-radius: 0.4rem;
   z-index: 10;
   border: 1px solid ${(props) => props.theme.Title};
+  background-color: ${(props) => props.theme.Background};
   transition: 0.4s;
   &:hover {
     background-color: ${(props) => props.theme.Hover};
   }
-  @media screen and (max-width: 62rem) {
+  @media screen and (max-width: 1080px) {
     right: 1.5rem;
     padding: 0.25rem 0.4rem;
   }
-  @media screen and (max-width: 48rem) {
-    bottom: ${(props) => (props.show ? "4rem" : "-20%")};
-  }
-  @media screen and (max-width: 22rem) {
+  @media screen and (max-width: 480px) {
     right: 1rem;
   }
 `;
@@ -33,7 +31,7 @@ const Icon = styled.i`
 `;
 function ScrollUp() {
   const [show, setShow] = useState(false);
-  //   the scroll is displayed when passing 500 vw
+  //   the scroll is displayed when passing 50 vw
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY > 50 ? setShow(true) : setShow(false);

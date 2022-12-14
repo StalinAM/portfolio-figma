@@ -6,9 +6,9 @@ import Projects from "./projects/Projects";
 import Skills from "./skills/Skills";
 import { MainContainer } from "../subComponents/Container";
 
-function Main() {
+function Main({ toggle }) {
   return (
-    <MainContainer>
+    <MainContainer show={toggle}>
       <Home />
       <Projects />
       <Skills />

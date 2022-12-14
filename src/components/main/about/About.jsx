@@ -19,27 +19,14 @@ const Text = styled.p`
   font-size: 1rem;
   color: ${(props) => props.theme.Description};
 `;
+const TextLink = styled.a`
+  color: ${(props) => props.theme.Title};
+`;
 const Left = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: flex-start;
-`;
-const Arrow = styled.i``;
-const Btn = styled.a`
-  display: flex;
-  gap: 0.5rem;
-  color: ${(props) => props.theme.Subtitle};
-  font-size: 1rem;
-  font-weight: 500;
-  border: 1px solid ${(props) => props.theme.Title};
-  padding: 0.5rem 1rem;
-  &:hover {
-    background-color: ${(props) => props.theme.Hover};
-  }
-  &:hover ${Arrow} {
-    transform: translate(0.25rem);
-  }
 `;
 const ImageHome = styled.img`
   width: 70%;
@@ -50,23 +37,27 @@ function About() {
       <Title title="about-me" />
       <Content>
         <Left>
-          <Text>Hello, i’m Elias!</Text>
+          <Text>Hi, I'm Stalin!</Text>
           <Text>
-            I’m a self-taught front-end developer based in Kyiv, Ukraine. I can
-            develop responsive websites from scratch and raise them into modern
-            user-friendly web experiences.
+            I love creating all kinds of things for the web. My history in
+            technology was when I was a high school student when I wanted to
+            customize my PC, I found several tutorials on the internet where
+            they showed how to do it and I was fascinated by this world.
           </Text>
           <Text>
-            Transforming my creativity and knowledge into a websites has been my
-            passion for over a year. I have been helping various clients to
-            establish their presence online. I always strive to learn about the
-            newest technologies and frameworks.
+            For some time I learned several things about Computer Science
+            including programming in languages like C, Java, Python, but a long
+            time ago I discovered my passion for the world of web development
+            and the beauty behind building interactive websites like the ones
+            you will find in <TextLink href="#projects">My portfolio</TextLink>.
+            Now I am looking for a developer position so I can learn and polish
+            my skills among professionals.
           </Text>
-          <Btn>
-            Read more<Arrow className="uil uil-arrow-right"></Arrow>
-          </Btn>
         </Left>
-        <ImageHome src={imageHome} />
+        <ImageHome
+          src={imageHome}
+          alt="illustration of Stalin who is in front of a laptop where he programs"
+        />
       </Content>
     </Container>
   );

@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
         font-family: 'Fira Code', monospace;
         background-color: #282C33;
+        overflow-y: ${(props) => (props.toggle ? "hidden" : "")};
     }
     h1,h2,h3,h4,h5,h6{
         margin: 0;
@@ -26,6 +27,18 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
         border: none;
         outline: none;
+    }
+    body::-webkit-scrollbar {
+        width: 5px;               /* width of the entire scrollbar */
+    }
+
+    body::-webkit-scrollbar-track {
+        background: none;        /* color of the tracking area */
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: rgb(255, 193, 5);    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
     }
 `;
 export default GlobalStyles;

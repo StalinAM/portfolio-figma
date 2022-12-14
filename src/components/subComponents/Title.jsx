@@ -19,6 +19,12 @@ const Line = styled.div`
   width: 24rem;
   height: 2px;
   background-color: ${(props) => props.theme.Title};
+  @media screen and (max-width: 768px) {
+    width: 12rem;
+  }
+  @media screen and (max-width: 480px) {
+    width: 7rem;
+  }
 `;
 function Title({ title }) {
   return (
