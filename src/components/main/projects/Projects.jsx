@@ -25,12 +25,13 @@ const ViewAll = styled(Link)`
 `;
 function Projects() {
   const listProjects = projectsData
+    .reverse()
     .filter((item) => item.category == "complete")
-    .slice(-3);
+    .slice(0, 3);
   return (
     <Container id="projects">
       <Title title="projects" />
-      <BoxCardWork listProjects = {listProjects} />
+      <BoxCardWork listProjects={listProjects} />
       <ViewAll to="/all-projects">
         View all<Arrow className="uil uil-arrow-right"></Arrow>
       </ViewAll>

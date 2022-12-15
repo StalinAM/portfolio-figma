@@ -1,19 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 const Container = styled.li`
+  display: flex;
+  flex-direction: column;
   border: 1px solid ${(props) => props.theme.Description};
 `;
 const ImgProject = styled.img`
   width: 100%;
 `;
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+`;
 const BoxTools = styled.ul`
   display: flex;
-  border-top: 1px solid ${(props) => props.theme.Description};
-  gap: 0.5rem;
+  gap: 1.3rem;
   padding: 0.5rem 1rem;
 `;
 const Tools = styled.li`
   color: ${(props) => props.theme.Description};
+  font-size: 0.8rem;
 `;
 const Details = styled.div`
   display: flex;
@@ -63,23 +71,27 @@ function WorkCard({ id, image, title, description, web, tools, github }) {
   return (
     <Container key={id}>
       <ImgProject src={image} />
-      <Details>
-        <Title>{title}</Title>
-        <Description>{description}</Description>
-        <BtnC>
-          <LiveBtn href={web} target="_blank">
-            Live<Arrow className="uil uil-arrow-right"></Arrow>
-          </LiveBtn>
-          <IconGit href={github} target="_blank">
-            <i className="uil uil-github"></i>
-          </IconGit>
-        </BtnC>
-      </Details>
-      <BoxTools>
-        {tools.map((item, index) => (
-          <Tools key={index}>{item}</Tools>
-        ))}
-      </BoxTools>
+      <Content>
+        <Details>
+          <Title>{title}</Title>
+          <Description>{description}</Description>
+          <BtnC>
+            <LiveBtn href={web} target="_blank">
+              Live<Arrow className="uil uil-arrow-right"></Arrow>
+            </LiveBtn>
+            <IconGit href={github} target="_blank">
+              <i className="uil uil-github"></i>
+            </IconGit>
+          </BtnC>
+        </Details>
+        <footer>
+          <BoxTools>
+            {tools.map((item, index) => (
+              <Tools key={index}>{item}</Tools>
+            ))}
+          </BoxTools>
+        </footer>
+      </Content>
     </Container>
   );
 }

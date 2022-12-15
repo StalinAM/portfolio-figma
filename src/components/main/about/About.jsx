@@ -8,6 +8,7 @@ const Content = styled.div`
   max-width: ${(props) => props.theme.WidthSection};
   margin: 3rem auto 0;
   display: grid;
+  gap: 2.5rem;
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
@@ -29,7 +30,7 @@ const Left = styled.div`
   align-items: flex-start;
 `;
 const ImageHome = styled.img`
-  width: 70%;
+  width: 100%;
 `;
 function About() {
   return (

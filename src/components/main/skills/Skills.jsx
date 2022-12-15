@@ -20,7 +20,7 @@ function Skills() {
       <Title title="skills" />
       <Content>
         <CardSkill title="Frontend" listSkills={frontend} />
-        <CardSkill title="Backend" listSkills={backend} />
+        <CardSkill title="Others" listSkills={backend} />
       </Content>
     </Container>
   );

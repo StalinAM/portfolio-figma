@@ -5,16 +5,18 @@ import HeaderP from "./allProjects/HeaderP";
 import SectionP from "./allProjects/SectionP";
 
 function AllProjects() {
-  const smallProjects = projectsData.filter((item) => item.category == "small");
-  const completeProjects = projectsData.filter(
-    (item) => item.category == "complete"
-  );
+  const smallProjects = projectsData
+    .reverse()
+    .filter((item) => item.category == "component");
+  const completeProjects = projectsData
+    .reverse()
+    .filter((item) => item.category == "complete");
   return (
     <>
       <HeaderP />
       <MainContainer>
-        <SectionP title="complete-apps" listProjects={completeProjects} />
-        <SectionP title="small-projects" listProjects={smallProjects} />
+        <SectionP title="complete-apps-webs" listProjects={completeProjects} />
+        <SectionP title="components" listProjects={smallProjects} />
       </MainContainer>
     </>
   );
