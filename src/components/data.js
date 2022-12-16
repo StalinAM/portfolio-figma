@@ -17,7 +17,7 @@ const projectsData = [
         id: 4, image: Project4, title: "Sunnyside", description: "Page to raise money through plans with progress bar and total number of sponsors.", tools: ["JavaScript", "CSS"], category: "complete", web: "https://stalinam.github.io/sunny-agengy/", github: "https://github.com/StalinAM/sunny-agengy"
     },
     , {
-        id: 5, image: Project5, title: "Template Portfolio", description: "Web developer portfolio template", tools: ["React.js", "Styled Components"], category: "complete", web: "https://stalinam.github.io/sunny-agengy/", github: "https://github.com/StalinAM/PortfolioPersonal"
+        id: 5, image: Project5, title: "Template Portfolio", description: "Web developer portfolio template", tools: ["React.js", "Styled Components"], category: "complete", web: "https://template-portfolio-svam.netlify.app/", github: "https://github.com/StalinAM/PortfolioPersonal"
     },
     {
         id: 6, title: "Expenses chart ", description: "Spend chart component marking current day", tools: ["JavaScript", "CSS"], category: "component"
@@ -47,4 +47,12 @@ const backend = [
     { id: 3, name: 'MySQL' },
     { id: 4, name: 'Firebase' },
 ]
-export { projectsData, frontend, backend }
+// MENU
+
+const listMenu = [
+    { id: 1, link: '#home', title: 'home' },
+    { id: 2, link: '#projects', title: 'works' },
+    { id: 3, link: '#about', title: 'about' },
+    { id: 4, link: '#contact', title: 'contact' },
+]
+export { projectsData, frontend, backend, listMenu }

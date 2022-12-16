@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../../assets/logo.svg";
-import items from "./items";
+import { listMenu } from "../data";
 
 const HeaderC = styled.header`
   padding: 2.5rem 2.5rem 0;
@@ -75,7 +75,7 @@ const Header = ({ toggle, setToggle }) => {
       <Nav>
         <LogoImg src={logo} alt="SVAM logo" />
         <List show={toggle}>
-          {items.map((item) => (
+          {listMenu.map((item) => (
             <li key={item.id}>
               <Links href={item.link} onClick={() => setToggle(!toggle)}>
                 <Icon>#</Icon>
