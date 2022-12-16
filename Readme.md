@@ -2,23 +2,13 @@
 
 ![](./public//main.webp)
 
-This is my personal portfolio
-
-## Table of contents
-
-- [Portfolio](#portfolio)
-  - [Table of contents](#table-of-contents)
-  - [Overview](#overview)
-    - [Links](#links)
-  - [My process](#my-process)
-    - [Built with](#built-with)
-  - [Author](#author)
+This is my personal portfolio created with React, styled with style-components and using React Ruter to link to a page of all my projects
 
 ## Overview
 
 ### Links
 
-- Live Site URL: [GitHub](https://svam.netlify.app/)
+- Live Site URL: [SVAM](https://svam.netlify.app/)
 
 ## My process
 

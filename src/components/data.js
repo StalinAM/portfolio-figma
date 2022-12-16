@@ -18,7 +18,7 @@ const projectsData = [
         id: 4, image: Project4, title: "Sunnyside", description: "Page to raise money through plans with progress bar and total number of sponsors.", tools: ["JavaScript", "CSS"], category: "complete", web: "https://stalinam.github.io/sunny-agengy/", github: "https://github.com/StalinAM/sunny-agengy"
     }
     , {
-        id: 5, image: Project5, title: "Template Portfolio", description: "Web developer portfolio template", tools: ["React.js", "Styled Components"], category: "complete", web: "https://template-portfolio-svam.netlify.app/", github: "https://github.com/StalinAM/PortfolioPersonal"
+        id: 5, image: Project5, title: "Template Portfolio", description: "Web developer portfolio template created with React and EmailJS", tools: ["React.js", "Styled Components"], category: "complete", web: "https://template-portfolio-svam.netlify.app/", github: "https://github.com/StalinAM/PortfolioPersonal"
     },
     {
         id: 6, title: "Expenses chart ", description: "Spend chart component marking current day", tools: ["JavaScript", "CSS"], category: "component"
@@ -32,7 +32,7 @@ const projectsData = [
         id: 8, title: "NFT Card", description: "Sample nft letter with buyer information", tools: ["HTML", "CSS"], category: "component"
         , web: "https://stalinam.github.io/NFT-PreviewCard/", github: "https://github.com/StalinAM/NFT-PreviewCard"
     }, {
-        id: 9, image: Project6, title: "Portfolio (current)", description: "Web developer portfolio template", tools: ["React.js", "Styled Components", "React Router"], category: "complete", web: "https://svam.netlify.app/", github: "https://github.com/StalinAM/portfolio-figma"
+        id: 9, image: Project6, title: "Portfolio (current)", description: "This is my personal portfolio created with React and React Router", tools: ["React.js", "Styled Components", "React Router"], category: "complete", web: "https://svam.netlify.app/", github: "https://github.com/StalinAM/portfolio-figma"
     }
 ].reverse()
 // SKILLS
