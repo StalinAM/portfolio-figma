@@ -5,12 +5,12 @@ import HeaderP from "./allProjects/HeaderP";
 import SectionP from "./allProjects/SectionP";
 
 function AllProjects() {
-  const smallProjects = projectsData
-    .reverse()
-    .filter((item) => item.category == "component");
-  const completeProjects = projectsData
-    .reverse()
-    .filter((item) => item.category == "complete");
+  const smallProjects = projectsData.filter(
+    (item) => item.category == "component"
+  );
+  const completeProjects = projectsData.filter(
+    (item) => item.category == "complete"
+  );
   return (
     <>
       <HeaderP />

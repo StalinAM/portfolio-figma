@@ -25,7 +25,6 @@ const ViewAll = styled(Link)`
 `;
 function Projects() {
   const listProjects = projectsData
-    .reverse()
     .filter((item) => item.category == "complete")
     .slice(0, 3);
   return (
