@@ -39,7 +39,7 @@ function ScrollUp() {
   }, []);
 
   return (
-    <Scroll href="#" show={show}>
+    <Scroll href="#" aria-label="Return to home" show={show}>
       <Icon className="uil uil-arrow-up"></Icon>
     </Scroll>
   );

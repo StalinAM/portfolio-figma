@@ -70,7 +70,7 @@ const IconGit = styled.a`
 function WorkCard({ id, image, title, description, web, tools, github }) {
   return (
     <Container key={id}>
-      <ImgProject src={image} />
+      {image && <ImgProject src={image} alt={description} />}
       <Content>
         <Details>
           <Title>{title}</Title>
@@ -79,7 +79,7 @@ function WorkCard({ id, image, title, description, web, tools, github }) {
             <LiveBtn href={web} target="_blank">
               Live<Arrow className="uil uil-arrow-right"></Arrow>
             </LiveBtn>
-            <IconGit href={github} target="_blank">
+            <IconGit href={github} aria-label="Github Link" target="_blank">
               <i className="uil uil-github"></i>
             </IconGit>
           </BtnC>

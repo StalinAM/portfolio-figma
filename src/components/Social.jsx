@@ -37,10 +37,11 @@ function Social() {
       <Icon
         href="https://www.linkedin.com/in/stalin-acurio-915561248/"
         target="_blank"
+        aria-label="Linkedin Link"
       >
         <i className="uil uil-linkedin"></i>
       </Icon>
-      <Icon href="https://github.com/StalinAM" target="_blank">
+      <Icon href="https://github.com/StalinAM" target="_blank" aria-label="Github Link">
         <i className="uil uil-github"></i>
       </Icon>
       <Line />

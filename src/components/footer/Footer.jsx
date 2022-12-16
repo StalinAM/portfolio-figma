@@ -56,13 +56,18 @@ function Footer() {
           <IconC>
             <Icon
               href="https://www.linkedin.com/in/stalin-acurio-915561248/"
+              aria-label="Linkedin link"
               target="_blank"
             >
               <i className="uil uil-linkedin"></i>
             </Icon>
           </IconC>
           <IconC>
-            <Icon href="https://github.com/StalinAM" target="_blank">
+            <Icon
+              href="https://github.com/StalinAM"
+              aria-label="Github link"
+              target="_blank"
+            >
               <i className="uil uil-github"></i>
             </Icon>
           </IconC>
