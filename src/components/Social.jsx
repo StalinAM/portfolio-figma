@@ -24,7 +24,7 @@ const Line = styled.div`
   background-color: ${(props) => props.theme.Title};
 `;
 const Icon = styled.a`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: ${(props) => props.theme.Description};
   &:hover {
     color: ${(props) => props.theme.Subtitle};

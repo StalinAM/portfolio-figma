@@ -13,7 +13,7 @@ function App() {
   const [toggle, setToggle] = useState(false);
   return (
     <>
-      <GlobalStyles toggle={toggle}/>
+      <GlobalStyles toggle={toggle} />
       <ThemeProvider theme={DarkTheme}>
         <Routes>
           <Route

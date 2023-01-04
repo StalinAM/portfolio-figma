@@ -9,7 +9,7 @@ const Content = styled.div`
   display: grid;
   justify-items: center;
   align-items: start;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -25,10 +25,10 @@ function Contact() {
     <Container id="contact">
       <Title title="contact" />
       <Content>
-        <Text>
+        {/* <Text>
           I’m interested in freelance opportunities. However, if you have other
           request or question, don’t hesitate to contact me
-        </Text>
+        </Text> */}
         <FormContact />
       </Content>
     </Container>

@@ -4,6 +4,13 @@ const Container = styled.li`
   display: flex;
   flex-direction: column;
   border: 1px solid ${(props) => props.theme.Description};
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.5s ease 0s;
+  &:hover {
+    transform: translateY(-1rem);
+    border: 2px solid ${(props) => props.theme.Title};
+  }
 `;
 const ImgProject = styled.img`
   width: 100%;
@@ -43,22 +50,6 @@ const BtnC = styled.div`
   gap: 1rem;
   align-items: center;
 `;
-const Arrow = styled.i`
-  font-size: 1rem;
-`;
-const LiveBtn = styled.a`
-  display: flex;
-  gap: 0.5rem;
-  border: 1px solid ${(props) => props.theme.Title};
-  padding: 0.5rem 1rem;
-  color: ${(props) => props.theme.Subtitle};
-  &:hover {
-    background-color: ${(props) => props.theme.Hover};
-  }
-  &:hover ${Arrow} {
-    transform: translate(0.25rem);
-  }
-`;
 
 const IconGit = styled.a`
   font-size: 2.1rem;
@@ -69,30 +60,29 @@ const IconGit = styled.a`
 `;
 function WorkCard({ id, image, title, description, web, tools, github }) {
   return (
-    <Container key={id}>
-      {image && <ImgProject src={image} alt={description} />}
-      <Content>
-        <Details>
-          <Title>{title}</Title>
-          <Description>{description}</Description>
-          <BtnC>
-            <LiveBtn href={web} target="_blank">
-              Live<Arrow className="uil uil-arrow-right"></Arrow>
-            </LiveBtn>
-            <IconGit href={github} aria-label="Github Link" target="_blank">
-              <i className="uil uil-github"></i>
-            </IconGit>
-          </BtnC>
-        </Details>
-        <footer>
-          <BoxTools>
-            {tools.map((item, index) => (
-              <Tools key={index}>{item}</Tools>
-            ))}
-          </BoxTools>
-        </footer>
-      </Content>
-    </Container>
+    <a key={id} href={web} target="_blank">
+      <Container>
+        {image && <ImgProject src={image} alt={description} />}
+        <Content>
+          <Details>
+            <Title>{title}</Title>
+            <Description>{description}</Description>
+            <BtnC>
+              <IconGit href={github} aria-label="Github Link" target="_blank">
+                <i className="uil uil-github"></i>
+              </IconGit>
+            </BtnC>
+          </Details>
+          <footer>
+            <BoxTools>
+              {tools.map((item, index) => (
+                <Tools key={index}>{item}</Tools>
+              ))}
+            </BoxTools>
+          </footer>
+        </Content>
+      </Container>
+    </a>
   );
 }
 
