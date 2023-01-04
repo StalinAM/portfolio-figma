@@ -26,14 +26,15 @@ const Btn = styled.a`
   }
 `;
 const TitleSpan = styled.span`
+  font-size: 2.3rem;
   color: ${(props) => props.theme.Title};
 `;
 function DataPerson() {
   return (
     <Info>
       <Title>
-        Hi, my name is <TitleSpan>Stalin</TitleSpan> and I'am 
-        <TitleSpan> front-end developer</TitleSpan>
+        Hi, my name is <TitleSpan>Stalin</TitleSpan> and I'am
+        <TitleSpan> frontend developer</TitleSpan>
       </Title>
       <Description>I have a passion for software development.</Description>
       <Btn href="#contact">Contact me!</Btn>

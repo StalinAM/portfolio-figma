@@ -72,7 +72,7 @@ function Footer() {
             </Icon>
           </IconC>
         </ListIcons>
-        <Copyright>© SVAM. All rigths reserved</Copyright>
+        <Copyright>Designed & Built by Stalin</Copyright>
       </Content>
     </Container>
   );
