@@ -12,7 +12,7 @@ function Main({ toggle }) {
       <Home />
       <Projects />
       <Skills />
-      <About />
+      {/* <About /> */}
       <Contact />
     </MainContainer>
   );
