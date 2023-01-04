@@ -10,7 +10,23 @@ const Container = styled.div`
 const Tag = styled.h2`
   color: ${(props) => props.theme.Subtitle};
   font-size: 2rem;
-  font-weight: 500;
+  display: block;
+  white-space: nowrap;
+  border-right: 2px solid;
+  width: ${(props) => props.title.length + 1}ch;
+  animation: typing 3s steps(${(props) => props.title.length + 1}),
+    blink 0.6s infinite;
+  overflow: hidden;
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
 `;
 const TagSpan = styled.span`
   color: ${(props) => props.theme.Title};
@@ -29,7 +45,7 @@ const Line = styled.div`
 function Title({ title }) {
   return (
     <Container>
-      <Tag>
+      <Tag title={title}>
         <TagSpan>#</TagSpan>
         {title}
       </Tag>
