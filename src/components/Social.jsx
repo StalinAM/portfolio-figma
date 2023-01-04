@@ -29,6 +29,10 @@ const Icon = styled.a`
   &:hover {
     color: ${(props) => props.theme.Subtitle};
   }
+  transition: transform 0.5s ease 0s;
+  &:hover {
+    transform: translateY(-0.3rem);
+  }
 `;
 
 function Social() {
@@ -41,7 +45,11 @@ function Social() {
       >
         <i className="uil uil-linkedin"></i>
       </Icon>
-      <Icon href="https://github.com/StalinAM" target="_blank" aria-label="Github Link">
+      <Icon
+        href="https://github.com/StalinAM"
+        target="_blank"
+        aria-label="Github Link"
+      >
         <i className="uil uil-github"></i>
       </Icon>
       <Line />

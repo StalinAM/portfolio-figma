@@ -11,6 +11,7 @@ const Container = styled.li`
     transform: translateY(-1rem);
     border: 2px solid ${(props) => props.theme.Title};
   }
+  position: relative;
 `;
 const ImgProject = styled.img`
   width: 100%;
@@ -40,6 +41,13 @@ const Title = styled.h3`
   font-size: 1.5rem;
   color: ${(props) => props.theme.Subtitle};
 `;
+const LinkLive = styled.a`
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+`;
 const Description = styled.p`
   font-size: 1rem;
   font-weight: 400;
@@ -52,6 +60,7 @@ const BtnC = styled.div`
 `;
 
 const IconGit = styled.a`
+  z-index: 13;
   font-size: 2.1rem;
   color: ${(props) => props.theme.Description};
   &:hover {
@@ -60,29 +69,30 @@ const IconGit = styled.a`
 `;
 function WorkCard({ id, image, title, description, web, tools, github }) {
   return (
-    <a key={id} href={web} target="_blank">
-      <Container>
-        {image && <ImgProject src={image} alt={description} />}
-        <Content>
-          <Details>
-            <Title>{title}</Title>
-            <Description>{description}</Description>
-            <BtnC>
-              <IconGit href={github} aria-label="Github Link" target="_blank">
-                <i className="uil uil-github"></i>
-              </IconGit>
-            </BtnC>
-          </Details>
-          <footer>
-            <BoxTools>
-              {tools.map((item, index) => (
-                <Tools key={index}>{item}</Tools>
-              ))}
-            </BoxTools>
-          </footer>
-        </Content>
-      </Container>
-    </a>
+    <Container key={id}>
+      {image && <ImgProject src={image} alt={description} />}
+      <Content>
+        <Details>
+          <Title>
+            {title}
+            <LinkLive href={web} target="_blank"></LinkLive>
+          </Title>
+          <Description>{description}</Description>
+          <BtnC>
+            <IconGit href={github} aria-label="Github Link" target="_blank">
+              <i className="uil uil-github"></i>
+            </IconGit>
+          </BtnC>
+        </Details>
+        <footer>
+          <BoxTools>
+            {tools.map((item, index) => (
+              <Tools key={index}>{item}</Tools>
+            ))}
+          </BoxTools>
+        </footer>
+      </Content>
+    </Container>
   );
 }
 
