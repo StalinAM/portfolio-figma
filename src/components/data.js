@@ -101,7 +101,7 @@ const projectsData = [
   {
     id: 10,
     image: Project6,
-    title: "Portfolio (current)",
+    title: "Portfolio",
     description:
       "This is my personal portfolio created with React and React Router",
     tools: ["React.js", "Styled Components", "React Router"],
@@ -113,7 +113,7 @@ const projectsData = [
     id: 11,
     title: "Phone Directory",
     description: "API to manage contact numbers",
-    tools: ["Express", "Mongoose", "dotenv", "morgan"],
+    tools: ["Express", "Mongoose"],
     category: "component",
     web: "https://kind-red-turtle-tie.cyclic.app/api/persons",
     github: "https://github.com/StalinAM/starter-express-api",
@@ -139,7 +139,6 @@ const backend = [
 const listMenu = [
   { id: 1, link: "#home", title: "home" },
   { id: 2, link: "#projects", title: "projects" },
-  { id: 3, link: "#about", title: "about" },
-  { id: 4, link: "#contact", title: "contact" },
+  { id: 3, link: "#contact", title: "contact" },
 ];
 export { projectsData, frontend, backend, listMenu };
