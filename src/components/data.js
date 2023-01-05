@@ -4,7 +4,7 @@ import Project3 from "../assets/projects/project3.webp";
 import Project4 from "../assets/projects/project4.webp";
 import Project5 from "../assets/projects/project5.webp";
 import Project6 from "../assets/projects/project6.webp";
-import Project7 from "../assets/projects/Project7.webp";
+import Project7 from "../assets/projects/project7.webp";
 const projectsData = [
   {
     id: 1,
