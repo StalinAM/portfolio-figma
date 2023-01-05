@@ -5,6 +5,9 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
+    html{
+        scroll-behavior: smooth;
+    }
     body{
         overflow-x: hidden;
         font-family: 'Fira Code', monospace;

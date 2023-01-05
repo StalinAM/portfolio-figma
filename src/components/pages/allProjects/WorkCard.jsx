@@ -4,8 +4,6 @@ const Container = styled.li`
   display: flex;
   flex-direction: column;
   border: 1px solid ${(props) => props.theme.Description};
-  border-radius: 1rem;
-  overflow: hidden;
   transition: transform 0.5s ease 0s;
   &:hover {
     transform: translateY(-1rem);
@@ -24,8 +22,10 @@ const Content = styled.div`
 `;
 const BoxTools = styled.ul`
   display: flex;
-  gap: 1.3rem;
-  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0rem;
+  padding: 0 1rem 0.5rem;
 `;
 const Tools = styled.li`
   color: ${(props) => props.theme.Description};

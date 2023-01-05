@@ -26,7 +26,7 @@ const ViewAll = styled(Link)`
 function Projects() {
   const listProjects = projectsData
     .filter((item) => item.category == "complete")
-    .slice(0, 3);
+    .slice(0, 6);
   return (
     <Container id="projects">
       <Title title="projects" />
