@@ -6,9 +6,11 @@ const Info = styled.div`
   gap: 2rem;
 `;
 const Title = styled.h1`
+  display: flex;
+  flex-direction: column;
   font-weight: 600;
-  font-size: 2rem;
-  color: ${(props) => props.theme.Subtitle};
+  font-size: 3rem;
+  color: ${(props) => props.theme.Title};
 `;
 const Description = styled.p`
   font-size: 1rem;
@@ -26,17 +28,20 @@ const Btn = styled.a`
   }
 `;
 const TitleSpan = styled.span`
-  font-size: 2.3rem;
-  color: ${(props) => props.theme.Title};
+  font-size: 2rem;
+  color: ${(props) => props.theme.Subtitle};
 `;
 function DataPerson() {
   return (
     <Info>
       <Title>
-        Hi, my name is <TitleSpan>Stalin</TitleSpan> and I'am
-        <TitleSpan> frontend developer</TitleSpan>
+        Stalin Acurio
+        <TitleSpan> Frontend developer</TitleSpan>
       </Title>
-      <Description>I have a passion for software development.</Description>
+      <Description>
+        I'm excited to work on projects from the ground up and see them running
+        in a browser.
+      </Description>
       <Btn href="#contact">Contact me!</Btn>
     </Info>
   );
