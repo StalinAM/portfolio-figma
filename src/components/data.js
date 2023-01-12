@@ -5,6 +5,7 @@ import Project4 from "../assets/projects/project4.webp";
 import Project5 from "../assets/projects/project5.webp";
 import Project6 from "../assets/projects/project6.webp";
 import Project7 from "../assets/projects/project7.webp";
+import Project8 from "../assets/projects/project8.webp";
 const projectsData = [
   {
     id: 1,
@@ -100,6 +101,17 @@ const projectsData = [
   },
   {
     id: 10,
+    image: Project8,
+    title: "Space Turism",
+    description:
+      "Space tourism web site that consists of several pages",
+    tools: ["React.js", "Next.js", "React Dom"],
+    category: "complete",
+    web: "https://space-tourism-svam.vercel.app/",
+    github: "https://github.com/StalinAM/space-tourism.git",
+  },
+  {
+    id: 11,
     image: Project6,
     title: "Portfolio",
     description:
@@ -132,7 +144,7 @@ const backend = [
   { id: 1, name: "Git" },
   { id: 2, name: "Express" },
   { id: 3, name: "MongoDB" },
-  { id: 4, name: "Firebase" },
+  { id: 4, name: "Next.js" },
 ];
 // MENU
 
