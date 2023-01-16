@@ -151,6 +151,7 @@ const backend = [
 const listMenu = [
   { id: 1, link: "#home", title: "home" },
   { id: 2, link: "#projects", title: "projects" },
-  { id: 3, link: "#contact", title: "contact" },
+  { id: 3, link: "#skills", title: "skills" },
+  { id: 4, link: "#contact", title: "contact" },
 ];
 export { projectsData, frontend, backend, listMenu };
