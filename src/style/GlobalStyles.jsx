@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 const GlobalStyles = createGlobalStyle`
     *,*::before,*::after{
         box-sizing: border-box;
@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Fira Code', monospace;
         background-color: #282C33;
         @media screen and (max-width: 768px) {
-            overflow-y: ${(props) => (props.toggle ? "hidden" : "")};
+            overflow-y: ${(props) => (props.toggle ? 'hidden' : '')};
         }
     }
     h1,h2,h3,h4,h5,h6{
@@ -45,5 +45,5 @@ const GlobalStyles = createGlobalStyle`
         background-color: rgb(255, 193, 5);    /* color of the scroll thumb */
         border-radius: 20px;       /* roundness of the scroll thumb */
     }
-`;
-export default GlobalStyles;
+`
+export default GlobalStyles

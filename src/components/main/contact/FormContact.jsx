@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
-import styled from "styled-components";
-import emailjs from "@emailjs/browser";
+import React, { useRef } from 'react'
+import styled from 'styled-components'
+import emailjs from '@emailjs/browser'
 const FormC = styled.form`
   width: 360px;
   display: flex;
@@ -12,7 +12,7 @@ const FormC = styled.form`
   @media screen and (max-width: 36rem) {
     width: 100%;
   }
-`;
+`
 const Input = styled.input`
   color: ${(props) => props.theme.Subtitle};
   border: 1px solid ${(props) => props.theme.Description};
@@ -23,7 +23,7 @@ const Input = styled.input`
   @media screen and (max-width: 36rem) {
     padding: 1rem;
   }
-`;
+`
 const InputProject = styled.textarea`
   border: 1px solid ${(props) => props.theme.Description};
   background: none;
@@ -33,7 +33,7 @@ const InputProject = styled.textarea`
   color: ${(props) => props.theme.Subtitle};
   font-size: 1rem;
   outline: none;
-`;
+`
 const ButtomForm = styled.button`
   width: 10rem;
   padding: 0.5rem 1rem;
@@ -43,38 +43,38 @@ const ButtomForm = styled.button`
   font-size: 1rem;
   font-weight: 500;
   border: 1px solid ${(props) => props.theme.Title};
-  font-family: "Fira Code", monospace;
+  font-family: 'Fira Code', monospace;
   &:hover {
     background-color: ${(props) => props.theme.Hover};
   }
-`;
+`
 function FormContact() {
-  const form = useRef();
+  const form = useRef()
 
   const sendEmail = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     emailjs.sendForm(
-      "service_1ws3xds",
-      "template_zslq32f",
+      'service_1ws3xds',
+      'template_zslq32f',
       form.current,
-      "ZD_8FYGrpSoVVUwFY"
-    );
-    e.target.reset();
-  };
+      'ZD_8FYGrpSoVVUwFY'
+    )
+    e.target.reset()
+  }
   return (
     <FormC ref={form} onSubmit={sendEmail}>
-      <Input type="text" name="name" placeholder="Insert your name" />
-      <Input type="email" name="email" placeholder="Insert your email" />
+      <Input type='text' name='name' placeholder='Insert your name' />
+      <Input type='email' name='email' placeholder='Insert your email' />
       <InputProject
-        name="project"
+        name='project'
         cols={30}
         rows={10}
-        placeholder="Write your massage"
+        placeholder='Write your massage'
       />
-      <ButtomForm href="#contact">Send Message</ButtomForm>
+      <ButtomForm href='#contact'>Send Message</ButtomForm>
     </FormC>
-  );
+  )
 }
 
-export default FormContact;
+export default FormContact

@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import Title from "../../subComponents/Title";
-import { Link } from "react-router-dom";
-import { Container } from "../../subComponents/Container";
-import BoxCardWork from "../../pages/allProjects/BoxCardWork";
-import { projectsData } from "../../data";
+import React from 'react'
+import styled from 'styled-components'
+import Title from '../../subComponents/Title'
+import { Link } from 'react-router-dom'
+import { Container } from '../../subComponents/Container'
+import BoxCardWork from '../../pages/allProjects/BoxCardWork'
+import { projectsData } from '../../data'
 
-const Arrow = styled.i``;
+const Arrow = styled.i``
 const ViewAll = styled(Link)`
   margin: 0 auto;
   width: fit-content;
@@ -22,20 +22,20 @@ const ViewAll = styled(Link)`
   &:hover ${Arrow} {
     transform: translate(0.3rem);
   }
-`;
+`
 function Projects() {
   const listProjects = projectsData
-    .filter((item) => item.category == "complete")
-    .slice(0, 6);
+    .filter((item) => item.category == 'complete')
+    .slice(0, 6)
   return (
-    <Container id="projects">
-      <Title title="projects" />
+    <Container id='projects'>
+      <Title title='projects' />
       <BoxCardWork listProjects={listProjects} />
-      <ViewAll to="/all-projects">
-        View all<Arrow className="uil uil-arrow-right"></Arrow>
+      <ViewAll to='/all-projects'>
+        View all<Arrow className='uil uil-arrow-right'></Arrow>
       </ViewAll>
     </Container>
-  );
+  )
 }
 
-export default Projects;
+export default Projects

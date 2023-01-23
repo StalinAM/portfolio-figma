@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 const Container = styled.div`
   display: flex;
   max-width: ${(props) => props.theme.WidthSection};
   align-items: center;
   margin: 0 auto;
   gap: 1rem;
-`;
+`
 const Tag = styled.h2`
   color: ${(props) => props.theme.Subtitle};
   font-size: 2rem;
@@ -27,10 +27,10 @@ const Tag = styled.h2`
       border-color: transparent;
     }
   }
-`;
+`
 const TagSpan = styled.span`
   color: ${(props) => props.theme.Title};
-`;
+`
 const Line = styled.div`
   width: 24rem;
   height: 2px;
@@ -41,7 +41,7 @@ const Line = styled.div`
   @media screen and (max-width: 480px) {
     width: 7rem;
   }
-`;
+`
 function Title({ title }) {
   return (
     <Container>
@@ -51,7 +51,7 @@ function Title({ title }) {
       </Tag>
       <Line />
     </Container>
-  );
+  )
 }
 
-export default Title;
+export default Title

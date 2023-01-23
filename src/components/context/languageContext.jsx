@@ -1,9 +1,9 @@
 import { createContext } from 'react'
 
-const lang = createContext()
+const langContext = createContext()
 
-function LanguageContext() {
-  return <div>languageContext</div>
+function LanguageContext({ children }) {
+  return <langContext.Provider>{children}</langContext.Provider>
 }
 
-export { LanguageContext, lang }
+export { LanguageContext, langContext }

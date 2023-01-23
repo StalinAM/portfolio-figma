@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import WorkCard from "./WorkCard";
+import React from 'react'
+import styled from 'styled-components'
+import WorkCard from './WorkCard'
 
 const Content = styled.ul`
   display: grid;
@@ -12,7 +12,7 @@ const Content = styled.ul`
   @media screen and (max-width: 1080px) {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
-`;
+`
 function BoxCardWork({ listProjects }) {
   return (
     <Content>
@@ -28,7 +28,7 @@ function BoxCardWork({ listProjects }) {
         />
       ))}
     </Content>
-  );
+  )
 }
 
-export default BoxCardWork;
+export default BoxCardWork

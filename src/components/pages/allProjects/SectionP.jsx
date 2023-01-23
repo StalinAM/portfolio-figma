@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Container } from "../../subComponents/Container";
-import BoxCardWork from "./BoxCardWork";
+import React from 'react'
+import styled from 'styled-components'
+import { Container } from '../../subComponents/Container'
+import BoxCardWork from './BoxCardWork'
 
 const Title = styled.h2`
   font-size: 2rem;
@@ -24,10 +24,10 @@ const Title = styled.h2`
       border-color: transparent;
     }
   }
-`;
+`
 const TitleSpan = styled.span`
   color: ${(props) => props.theme.Title};
-`;
+`
 function SectionP({ title, listProjects }) {
   return (
     <Container>
@@ -37,7 +37,7 @@ function SectionP({ title, listProjects }) {
       </Title>
       <BoxCardWork listProjects={listProjects} />
     </Container>
-  );
+  )
 }
 
-export default SectionP;
+export default SectionP
