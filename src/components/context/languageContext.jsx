@@ -1,6 +1,6 @@
-import React from "react";
+import { createContext } from "react";
 
-function languageContext() {
+function LanguageContext() {
   return <div>languageContext</div>;
 }
 
