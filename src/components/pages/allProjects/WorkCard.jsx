@@ -75,12 +75,12 @@ function WorkCard({ id, image, title, description, web, tools, github }) {
         <Details>
           <Title>
             {title}
-            <LinkLive href={web} target='_blank'></LinkLive>
+            <LinkLive href={web} target='_blank' />
           </Title>
           <Description>{description}</Description>
           <BtnC>
             <IconGit href={github} aria-label='Github Link' target='_blank'>
-              <i className='uil uil-github'></i>
+              <i className='uil uil-github' />
             </IconGit>
           </BtnC>
         </Details>

@@ -43,14 +43,14 @@ function Social() {
         target='_blank'
         aria-label='Linkedin Link'
       >
-        <i className='uil uil-linkedin'></i>
+        <i className='uil uil-linkedin' />
       </Icon>
       <Icon
         href='https://github.com/StalinAM'
         target='_blank'
         aria-label='Github Link'
       >
-        <i className='uil uil-github'></i>
+        <i className='uil uil-github' />
       </Icon>
       <Line />
     </Container>

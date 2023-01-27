@@ -53,7 +53,8 @@ function HeaderP() {
   return (
     <Container id='header'>
       <BtnBack to='/'>
-        <Arrow className='uil uil-arrow-left'></Arrow>Back
+        <Arrow className='uil uil-arrow-left' />
+        Back
       </BtnBack>
       <Right>
         <Title>

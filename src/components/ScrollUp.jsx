@@ -40,7 +40,7 @@ function ScrollUp() {
 
   return (
     <Scroll href='#' aria-label='Return to home' show={show}>
-      <Icon className='uil uil-arrow-up'></Icon>
+      <Icon className='uil uil-arrow-up' />
     </Scroll>
   )
 }

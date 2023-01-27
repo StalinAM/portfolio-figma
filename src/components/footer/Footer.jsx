@@ -59,7 +59,7 @@ function Footer() {
               aria-label='Linkedin link'
               target='_blank'
             >
-              <i className='uil uil-linkedin'></i>
+              <i className='uil uil-linkedin' />
             </Icon>
           </IconC>
           <IconC>
@@ -68,7 +68,7 @@ function Footer() {
               aria-label='Github link'
               target='_blank'
             >
-              <i className='uil uil-github'></i>
+              <i className='uil uil-github' />
             </Icon>
           </IconC>
         </ListIcons>
