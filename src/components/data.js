@@ -121,7 +121,7 @@ const projectsData = [
     github: 'https://github.com/StalinAM/portfolio-figma'
   },
   {
-    id: 11,
+    id: 12,
     title: 'Phone Directory',
     description: 'API to manage contact numbers',
     tools: ['Express', 'Mongoose'],
