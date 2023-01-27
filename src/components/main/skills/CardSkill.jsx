@@ -42,7 +42,7 @@ function CardSkill({ title, listSkills }) {
       <List>
         {listSkills.map((item) => (
           <Item key={item.id}>
-            <Icon className='uil uil-label'></Icon>
+            <Icon className='uil uil-label' />
             {item.name}
           </Item>
         ))}
