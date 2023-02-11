@@ -5,9 +5,9 @@
     "description": "Me entusiasma trabajar en proyectos desde cero y verlos ejecutarse en un navegador."
   },
   "projects": {
-    "name": "projectos",
+    "title": "projectos",
     "completeProjects": {
-      "title": "",
+      "title": "apps-webs",
       "listProjectComplete": [
         {
           "id": 1,
@@ -22,7 +22,7 @@
         {
           "id": 2,
           "image": "https://i.ibb.co/0K1FCvr/project2.webp",
-          "title": "Advice Generator App",
+          "title": "Aplicación Generadora de Consejos",
           "description": "Sitio web en el cual al hacer clic en el icono verde, se genera un consejo aleatorio mediante una llamada a una API.",
           "tools": ["React.js", "CSS", "API Advice Slip"],
           "category": "complete",
@@ -52,7 +52,7 @@
         {
           "id": 5,
           "image": "https://i.ibb.co/tsppYSn/project5.webp",
-          "title": "Template Portfolio",
+          "title": "Plantilla para portafolio web",
           "description": "Portafolio de desarrollador web que cuenta con varias secciones, donde se exhiben los proyectos filtrados por categorías y con un formulario de contacto.",
           "tools": ["React.js", "Styled Components"],
           "category": "complete",
@@ -62,7 +62,7 @@
         {
           "id": 6,
           "image": "https://i.ibb.co/k6TJNPR/project6.webp",
-          "title": "Portfolio",
+          "title": "Portafolio",
           "description": "Mi portafolio web donde encontrarás mi trabajo y habilidades en diseño, desarrollo y tecnología, con ejemplos de proyectos anteriores.",
           "tools": ["React.js", "Styled Components", "React Router"],
           "category": "complete",
@@ -90,12 +90,15 @@
           "repository": "https://github.com/StalinAM/space-tourism.git"
         }
       ]
-    },
-    "components": [
+    }
+  },
+  "components": {
+    "title": "componentes",
+    "listProjectComponents": [
       {
         "id": 1,
-        "title": "Expenses chart ",
-        "description": "Spend chart component marking current day",
+        "title": "Detalles interactivos de la tarjeta",
+        "description": "Componente para ingresar información de tarjetas de crédito y mostrar su actualización en tiempo real.",
         "tools": ["JavaScript", "CSS"],
         "category": "component",
         "web": "https://stalinam.github.io/expenses-chart-component/",
@@ -103,8 +106,8 @@
       },
       {
         "id": 2,
-        "title": "Interactive rating component",
-        "description": "Rating component on the service provided",
+        "title": "Gráfico de gastos",
+        "description": "Componente que muestra un gráfico de los gastos de la semana anterior.",
         "tools": ["JavaScript", "CSS"],
         "category": "component",
         "web": "https://stalinam.github.io/InteractiveCardDetailsForm/",
@@ -112,8 +115,8 @@
       },
       {
         "id": 3,
-        "title": "NFT Card",
-        "description": "Sample nft letter with buyer information",
+        "title": "Carta NFT",
+        "description": "Componente de carta para mostrar información de un NFT.",
         "tools": ["HTML", "CSS"],
         "category": "component",
         "web": "https://stalinam.github.io/NFT-PreviewCard/",
@@ -121,8 +124,8 @@
       },
       {
         "id": 4,
-        "title": "Phone Directory",
-        "description": "API to manage contact numbers",
+        "title": "Agenda telefónica",
+        "description": "API para administrar números de contacto.",
         "tools": ["Express", "Mongoose"],
         "category": "component",
         "web": "https://kind-red-turtle-tie.cyclic.app/api/persons",
@@ -131,25 +134,15 @@
     ]
   },
   "skills": {
-    "name": "habilidades",
-    "frontend": {
-      "name": "Frontend",
-      "listSkills": [
-        { "id": 1, "name": "HTML" },
-        { "id": 2, "name": "CSS" },
-        { "id": 3, "name": "JavaScript" },
-        { "id": 4, "name": "Styled-Component" },
-        { "id": 5, "name": "React.js" }
-      ]
-    },
-    "others": {
-      "name": "Otros",
-      "listSkills": [
-        { "id": 1, "nameSkill": "Git" },
-        { "id": 2, "nameSkill": "Express" },
-        { "id": 3, "nameSkill": "MongoDB" },
-        { "id": 4, "nameSkill": "Next.js" }
-      ]
-    }
+    "title": "habilidades",
+    "frontend": "Frontend",
+    "others": "Otros"
+  },
+  "contact": {
+    "title": "contacto",
+    "name": "Ingrese su nombre",
+    "email": "Ingrese su correo electrónico",
+    "message": "Ingrese su mensaje",
+    "botton": "Enviar mensaje"
   }
 }
