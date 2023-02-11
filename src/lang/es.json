@@ -144,5 +144,11 @@
     "email": "Ingrese su correo electrónico",
     "message": "Ingrese su mensaje",
     "botton": "Enviar mensaje"
+  },
+  "span": {
+    "home": "Escríbeme!",
+    "projects": "Ver más",
+    "button": "Atrás",
+    "subtitle": "Lista de mis projectos"
   }
 }
