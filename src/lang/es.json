@@ -88,6 +88,26 @@
           "category": "complete",
           "web": "https://space-tourism-svam.vercel.app/",
           "repository": "https://github.com/StalinAM/space-tourism.git"
+        },
+        {
+          "id": 9,
+          "image": "https://i.ibb.co/h27MMfk/project9.webp",
+          "title": "GalloExpre C.A.",
+          "description": "Sitio web de turismo espacial con información de destinos, tripulación y tecnología utilizada para el viaje.",
+          "tools": ["React.js", "Styled-components"],
+          "category": "complete",
+          "web": "https://stalinam.github.io/galloexpre/",
+          "repository": "https://github.com/StalinAM/galloexpre.git"
+        },
+        {
+          "id": 10,
+          "image": "https://i.ibb.co/WfwD6Xw/project10.webp",
+          "title": "Hydra",
+          "description": "Sitio web de turismo espacial con información de destinos, tripulación y tecnología utilizada para el viaje.",
+          "tools": ["React.js", "Styled-components", "Atropos"],
+          "category": "complete",
+          "web": "https://hydravr.netlify.app/",
+          "repository": "https://github.com/StalinAM/hydra-landing-page.git"
         }
       ]
     }
