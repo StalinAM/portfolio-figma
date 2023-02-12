@@ -1,0 +1,174 @@
+{
+  "about": {
+    "name": "Stalin Acurio",
+    "position": "Frontend Developer",
+    "description": "I'm excited to work on projects from scratch and see them run in a browser."
+  },
+  "projects": {
+    "title": "projects",
+    "completeProjects": {
+      "title": "apps-webs",
+      "listProjectComplete": [
+        {
+          "id": 1,
+          "image": "https://i.ibb.co/1RyJFZM/project1.webp",
+          "title": "Fylo",
+          "description": "Cloud services website presenting services and testimonials, with a built-in module for entering and validating email addresses.",
+          "tools": ["JavaScript", "CSS"],
+          "category": "complete",
+          "web": "https://stalinam.github.io/fylo/",
+          "repository": "https://github.com/StalinAM/fylo"
+        },
+        {
+          "id": 2,
+          "image": "https://i.ibb.co/0K1FCvr/project2.webp",
+          "title": "Advice Generator Application",
+          "description": "Website in which clicking on the green icon generates a random tip through an API call.",
+          "tools": ["React.js", "CSS", "API Advice Slip"],
+          "category": "complete",
+          "web": "https://stalinam.github.io/adviceGeneratorApp/",
+          "repository": "https://github.com/StalinAM/adviceGeneratorApp"
+        },
+        {
+          "id": 3,
+          "image": "https://i.ibb.co/C9SJP3s/project3.webp",
+          "title": "Crowdfunding",
+          "description": "Page to raise funds through campaigns. With it, you can visualize the progress of the goal and the participation of supporters in real time.",
+          "tools": ["JavaScript", "CSS"],
+          "category": "complete",
+          "web": "https://stalinam.github.io/crowfunding-product-page/",
+          "repository": "https://github.com/StalinAM/crowfunding-product-page"
+        },
+        {
+          "id": 4,
+          "image": "https://i.ibb.co/wMzG9VX/project4.webp",
+          "title": "Sunnyside",
+          "description": "Website of a creative agency showcasing the agency's services, testimonials and designs.",
+          "tools": ["JavaScript", "CSS"],
+          "category": "complete",
+          "web": "https://stalinam.github.io/sunny-agengy/",
+          "repository": "https://github.com/StalinAM/sunny-agengy"
+        },
+        {
+          "id": 5,
+          "image": "https://i.ibb.co/tsppYSn/project5.webp",
+          "title": "Web portfolio template",
+          "description": "Web developer portfolio with several sections, where projects are displayed filtered by categories and with a contact form.",
+          "tools": ["React.js", "Styled Components"],
+          "category": "complete",
+          "web": "https://template-portfolio-svam.netlify.app/",
+          "repository": "https://github.com/StalinAM/PortfolioPersonal"
+        },
+        {
+          "id": 6,
+          "image": "https://i.ibb.co/k6TJNPR/project6.webp",
+          "title": "Portfolio",
+          "description": "My web portfolio where you will find my work and skills in design, development and technology, with examples of previous projects.",
+          "tools": ["React.js", "Styled Components", "React Router"],
+          "category": "complete",
+          "web": "https://svam.netlify.app/",
+          "repository": "https://github.com/StalinAM/portfolio-figma"
+        },
+        {
+          "id": 7,
+          "image": "https://i.ibb.co/jM0hsCc/project7.webp",
+          "title": "Rock, Paper, Scissors",
+          "description": "Web site to play Rock, Paper, Scissors with a simple and easy to use interface.",
+          "tools": ["React.js", "Styled Components", "React Router"],
+          "category": "complete",
+          "web": "https://stalinam.github.io/rock-paper-scissers-react/",
+          "repository": "https://github.com/StalinAM/rock-paper-scissers-react"
+        },
+        {
+          "id": 8,
+          "image": "https://i.ibb.co/qmxdf6d/project8.webp",
+          "title": "Space Turism",
+          "description": "The space tourism website provides detailed information about the destinations, crew and advanced technology employed on each interstellar voyage.",
+          "tools": ["React.js", "Next.js", "React Dom"],
+          "category": "complete",
+          "web": "https://space-tourism-svam.vercel.app/",
+          "repository": "https://github.com/StalinAM/space-tourism.git"
+        },
+        {
+          "id": 9,
+          "image": "https://i.ibb.co/h27MMfk/project9.webp",
+          "title": "GalloExpre C.A.",
+          "description": "I carried out the development of this project with the objective of optimizing the performance of the original page. In addition, we opted for a minimalist and functional design to modernize the appearance of the page.",
+          "tools": ["React.js", "Styled-components"],
+          "category": "complete",
+          "web": "https://stalinam.github.io/galloexpre/",
+          "repository": "https://github.com/StalinAM/galloexpre.git"
+        },
+        {
+          "id": 10,
+          "image": "https://i.ibb.co/WfwD6Xw/project10.webp",
+          "title": "Hydra",
+          "description": "I developed this website following a design provided by Zine, including effects that create a virtual reality experience.",
+          "tools": ["React.js", "Styled-components", "Atropos"],
+          "category": "complete",
+          "web": "https://hydravr.netlify.app/",
+          "repository": "https://github.com/StalinAM/hydra-landing-page.git"
+        }
+      ]
+    }
+  },
+  "components": {
+    "title": "components",
+    "listProjectComponents": [
+      {
+        "id": 1,
+        "title": "Interactive card details",
+        "description": "Component to enter credit card information and display its update in real time.",
+        "tools": ["JavaScript", "CSS"],
+        "category": "component",
+        "web": "https://stalinam.github.io/expenses-chart-component/",
+        "repository": "https://github.com/StalinAM/expenses-chart-component"
+      },
+      {
+        "id": 2,
+        "title": "Expense chart",
+        "description": "Component showing a graph of the previous week's expenditures.",
+        "tools": ["JavaScript", "CSS"],
+        "category": "component",
+        "web": "https://stalinam.github.io/InteractiveCardDetailsForm/",
+        "repository": "https://github.com/StalinAM/InteractiveCardDetailsForm"
+      },
+      {
+        "id": 3,
+        "title": "NFT card",
+        "description": "Chart component to display information from an NFT.",
+        "tools": ["HTML", "CSS"],
+        "category": "component",
+        "web": "https://stalinam.github.io/NFT-PreviewCard/",
+        "repository": "https://github.com/StalinAM/NFT-PreviewCard"
+      },
+      {
+        "id": 4,
+        "title": "Phonebook",
+        "description": "API to manage contact numbers.",
+        "tools": ["Express", "Mongoose"],
+        "category": "component",
+        "web": "https://kind-red-turtle-tie.cyclic.app/api/persons",
+        "repository": "https://github.com/StalinAM/starter-express-api"
+      }
+    ]
+  },
+  "skills": {
+    "title": "skills",
+    "frontend": "Frontend",
+    "others": "Others"
+  },
+  "contact": {
+    "title": "contact",
+    "name": "Enter your name",
+    "email": "Enter your email",
+    "message": "Enter your message",
+    "botton": "Send message"
+  },
+  "span": {
+    "home": "Contact me!",
+    "projects": "View more",
+    "button": "Back",
+    "subtitle": "List my projects"
+  }
+}
