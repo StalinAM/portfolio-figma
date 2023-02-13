@@ -1,5 +1,7 @@
+import { useContext } from 'react'
 import styled from 'styled-components'
 import logo from '../../assets/logo.svg'
+import { LanguageContext } from '../../context/Language'
 import { listMenu } from '../data'
 
 const HeaderC = styled.header`
@@ -69,6 +71,7 @@ const Close = styled.i`
   }
 `
 const Header = ({ toggle, setToggle }) => {
+  const { handleLanguage } = useContext(LanguageContext)
   return (
     <HeaderC>
       <Nav>
@@ -76,12 +79,16 @@ const Header = ({ toggle, setToggle }) => {
         <List show={toggle}>
           {listMenu.map((item) => (
             <li key={item.id}>
-              <Links href={item.link} onClick={() => setToggle(!toggle)}>
+              <Links href={item.link} onChange={() => setToggle(!toggle)}>
                 <Icon>#</Icon>
                 {item.title}
               </Links>
             </li>
           ))}
+          <select name='language' onClick={handleLanguage}>
+            <option value='es'>ES</option>
+            <option value='en'>EN</option>
+          </select>
           <Close
             show={toggle}
             className='uil uil-times'
