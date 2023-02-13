@@ -12,6 +12,7 @@ function Language({ children }) {
       setTexts(english)
     }
   }
+  console.log(texts)
   return (
     <LanguageContext.Provider value={{ texts, handleLanguage }}>
       {children}
