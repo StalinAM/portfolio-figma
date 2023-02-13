@@ -9,12 +9,11 @@ import AllProjects from './components/pages/AllProjects'
 import { Routes, Route } from 'react-router-dom'
 import ScrollUp from './components/ScrollUp'
 import Social from './components/Social'
-import { LanguageContext } from './components/context/languageContext'
 
 function App() {
   const [toggle, setToggle] = useState(false)
   return (
-    <LanguageContext>
+    <>
       <GlobalStyles toggle={toggle} />
       <ThemeProvider theme={DarkTheme}>
         <Routes>
@@ -33,7 +32,7 @@ function App() {
         <ScrollUp />
         <Social />
       </ThemeProvider>
-    </LanguageContext>
+    </>
   )
 }
 
