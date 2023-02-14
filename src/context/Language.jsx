@@ -3,7 +3,7 @@ import english from '../lang/en.json'
 import spanish from '../lang/es.json'
 export const LanguageContext = createContext()
 function Language({ children }) {
-  const [texts, setTexts] = useState({})
+  const [texts, setTexts] = useState(spanish)
 
   const handleLanguage = (e) => {
     if (e.target.value === 'es') {
