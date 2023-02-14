@@ -1,4 +1,12 @@
 {
+  "header": {
+    "listMenu": [
+      { "id": 1, "link": "#home", "title": "Home" },
+      { "id": 2, "link": "#projects", "title": "Projects" },
+      { "id": 3, "link": "#skills", "title": "Skills" },
+      { "id": 4, "link": "#contact", "title": "Contact" }
+    ]
+  },
   "about": {
     "name": "Stalin Acurio",
     "position": "Frontend Developer",

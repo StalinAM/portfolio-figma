@@ -1,4 +1,12 @@
 {
+  "header": {
+    "listMenu": [
+      { "id": 1, "link": "#home", "title": "Inicio" },
+      { "id": 2, "link": "#projects", "title": "Projectos" },
+      { "id": 3, "link": "#skills", "title": "Habilidades" },
+      { "id": 4, "link": "#contact", "title": "Contacto" }
+    ]
+  },
   "about": {
     "name": "Stalin Acurio",
     "position": "Desarrollador Frontend",
