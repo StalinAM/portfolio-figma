@@ -16,6 +16,9 @@ const GlobalStyles = createGlobalStyle`
             overflow-y: ${(props) => (props.toggle ? 'hidden' : '')};
         }
     }
+    input, textarea, select, button{
+        font-family: 'Fira Code', monospace;
+    }
     h1,h2,h3,h4,h5,h6{
         margin: 0;
         padding: 0;
