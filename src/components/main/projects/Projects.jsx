@@ -29,9 +29,10 @@ function Projects() {
     <Container id='projects'>
       <Title title={texts.projects.title} />
       <BoxCardWork
-        listProjects={texts.projects.completeProjects.listProjectComplete
-          .reverse()
-          .slice(0, 6)}
+        listProjects={texts.projects.completeProjects.listProjectComplete.slice(
+          0,
+          6
+        )}
       />
       <ViewAll to='/all-projects'>
         {texts.span.projects}

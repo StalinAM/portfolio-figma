@@ -6,17 +6,18 @@ import { LanguageContext } from '../../context/Language'
 
 function AllProjects() {
   const { texts } = useContext(LanguageContext)
-  const complete = texts.projects.completeProjects.listProjectComplete.reverse()
-  const components = texts.components.listProjectComponents.reverse()
   return (
     <>
       <HeaderP />
       <MainContainer>
         <SectionP
           title={texts.projects.completeProjects.title}
-          listProjects={complete}
+          listProjects={texts.projects.completeProjects.listProjectComplete}
         />
-        <SectionP title={texts.components.title} listProjects={components} />
+        <SectionP
+          title={texts.components.title}
+          listProjects={texts.components.listProjectComponents}
+        />
       </MainContainer>
     </>
   )
