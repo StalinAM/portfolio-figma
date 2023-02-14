@@ -2,7 +2,6 @@ import { useContext } from 'react'
 import styled from 'styled-components'
 import logo from '../../assets/logo.svg'
 import { LanguageContext } from '../../context/Language'
-import { listMenu } from '../data'
 
 const HeaderC = styled.header`
   padding: 2.5rem 2.5rem 0;
@@ -20,7 +19,7 @@ const LogoImg = styled.img`
 `
 const List = styled.ul`
   display: flex;
-  gap: 2rem;
+  gap: 2.3rem;
   z-index: 101;
   @media screen and (max-width: 768px) {
     display: ${(props) => (props.show ? 'flex' : 'none')};
@@ -37,16 +36,36 @@ const List = styled.ul`
   }
 `
 const Links = styled.a`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: ${(props) => props.theme.Description};
+  position: relative;
   &:hover {
-    color: ${(props) => props.theme.Subtitle};
+    color: ${(props) => props.theme.Title};
+  }
+  &::before {
+    font-weight: 400;
+    position: absolute;
+    color: #ffd200;
+    opacity: 0;
+    left: -15px;
+    content: '<';
+    transition: opacity 0.3s ease;
+  }
+  &::after {
+    font-weight: 400;
+    position: absolute;
+    color: #ffd200;
+    opacity: 0;
+    right: -21px;
+    content: '/>';
+    transition: opacity 0.3s ease;
+  }
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
   }
   @media screen and (max-width: 768px) {
     font-size: 1.7rem;
-  }
-  span {
-    color: ${(props) => props.theme.Title};
   }
 `
 const Open = styled.i`
@@ -89,17 +108,16 @@ const MenuLanguage = styled.select`
   }
 `
 const Header = ({ toggle, setToggle }) => {
-  const { handleLanguage } = useContext(LanguageContext)
+  const { handleLanguage, texts } = useContext(LanguageContext)
   return (
     <HeaderC>
       <Nav>
         <LogoImg src={logo} alt='SVAM logo' />
         <List show={toggle}>
-          {listMenu.map((item) => (
+          {texts.header.listMenu.map((item) => (
             <li key={item.id}>
               <Links href={item.link} onChange={() => setToggle(!toggle)}>
-                <span>#</span>
-                {item.title}
+                <span>{item.title}</span>
               </Links>
             </li>
           ))}

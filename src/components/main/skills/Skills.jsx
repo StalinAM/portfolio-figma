@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Title from '../../subComponents/Title'
 import CardSkill from './CardSkill'
 import { Container } from '../../subComponents/Container'
 import { frontend, backend } from '../../data'
+import { LanguageContext } from '../../../context/Language'
 const Content = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -15,12 +16,13 @@ const Content = styled.div`
   }
 `
 function Skills() {
+  const { texts } = useContext(LanguageContext)
   return (
     <Container id='skills'>
-      <Title title='skills' />
+      <Title title={texts.skills.title} />
       <Content>
-        <CardSkill title='Frontend' listSkills={frontend} />
-        <CardSkill title='Others' listSkills={backend} />
+        <CardSkill title={texts.skills.frontend} listSkills={frontend} />
+        <CardSkill title={texts.skills.others} listSkills={backend} />
       </Content>
     </Container>
   )

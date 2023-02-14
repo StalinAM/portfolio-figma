@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { LanguageContext } from '../../../context/Language'
 const Container = styled.header`
   display: flex;
   align-items: center;
@@ -50,17 +51,19 @@ const Right = styled.div`
   gap: 1rem;
 `
 function HeaderP() {
+  const { texts } = useContext(LanguageContext)
   return (
     <Container id='header'>
       <BtnBack to='/'>
         <Arrow className='uil uil-arrow-left' />
-        Back
+        {texts.span.button}
       </BtnBack>
       <Right>
         <Title>
-          <TitleSpan>/</TitleSpan>projects
+          <TitleSpan>/</TitleSpan>
+          {texts.projects.title}
         </Title>
-        <Description>List of my projects</Description>
+        <Description>{texts.span.subtitle}</Description>
       </Right>
     </Container>
   )

@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Title from '../../subComponents/Title'
 import { Link } from 'react-router-dom'
 import { Container } from '../../subComponents/Container'
 import BoxCardWork from '../../pages/allProjects/BoxCardWork'
-import { projectsData } from '../../data'
+import { LanguageContext } from '../../../context/Language'
 
 const Arrow = styled.i``
 const ViewAll = styled(Link)`
@@ -24,15 +24,17 @@ const ViewAll = styled(Link)`
   }
 `
 function Projects() {
-  const listProjects = projectsData
-    .filter((item) => item.category === 'complete')
-    .slice(0, 6)
+  const { texts } = useContext(LanguageContext)
   return (
     <Container id='projects'>
-      <Title title='projects' />
-      <BoxCardWork listProjects={listProjects} />
+      <Title title={texts.projects.title} />
+      <BoxCardWork
+        listProjects={texts.projects.completeProjects.listProjectComplete
+          .reverse()
+          .slice(0, 6)}
+      />
       <ViewAll to='/all-projects'>
-        View all
+        {texts.span.projects}
         <Arrow className='uil uil-arrow-right' />
       </ViewAll>
     </Container>

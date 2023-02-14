@@ -1,22 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { MainContainer } from '../subComponents/Container'
-import { projectsData } from '../data'
 import HeaderP from './allProjects/HeaderP'
 import SectionP from './allProjects/SectionP'
+import { LanguageContext } from '../../context/Language'
 
 function AllProjects() {
-  const smallProjects = projectsData.filter(
-    (item) => item.category === 'component'
-  )
-  const completeProjects = projectsData.filter(
-    (item) => item.category === 'complete'
-  )
+  const { texts } = useContext(LanguageContext)
+  const complete = texts.projects.completeProjects.listProjectComplete.reverse()
+  const components = texts.components.listProjectComponents.reverse()
   return (
     <>
       <HeaderP />
       <MainContainer>
-        <SectionP title='complete-apps-webs' listProjects={completeProjects} />
-        <SectionP title='components' listProjects={smallProjects} />
+        <SectionP
+          title={texts.projects.completeProjects.title}
+          listProjects={complete}
+        />
+        <SectionP title={texts.components.title} listProjects={components} />
       </MainContainer>
     </>
   )

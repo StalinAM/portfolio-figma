@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Title from '../../subComponents/Title'
 import FormContact from './FormContact'
 import { Container } from '../../subComponents/Container'
+import { LanguageContext } from '../../../context/Language'
 const Content = styled.div`
   max-width: ${(props) => props.theme.WidthSection};
   margin: 3rem auto 0;
@@ -21,9 +22,10 @@ const Content = styled.div`
 ` */
 
 function Contact() {
+  const { texts } = useContext(LanguageContext)
   return (
     <Container id='contact'>
-      <Title title='contact' />
+      <Title title={texts.contact.title} />
       <Content>
         {/* <Text>
           I’m interested in freelance opportunities. However, if you have other
