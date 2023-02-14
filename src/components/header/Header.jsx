@@ -45,9 +45,9 @@ const Links = styled.a`
   @media screen and (max-width: 768px) {
     font-size: 1.7rem;
   }
-`
-const Icon = styled.span`
-  color: ${(props) => props.theme.Title};
+  span {
+    color: ${(props) => props.theme.Title};
+  }
 `
 const Open = styled.i`
   cursor: pointer;
@@ -70,6 +70,24 @@ const Close = styled.i`
     top: 2.5rem;
   }
 `
+const MenuLanguage = styled.select`
+  background: ${(props) => props.theme.Background};
+  border: none;
+  color: ${(props) => props.theme.Title};
+  font-size: 1.2rem;
+  cursor: pointer;
+  appearance: none;
+  padding: 0 0.5rem;
+  &:focus-visible {
+    outline: none;
+  }
+  option {
+    color: ${(props) => props.theme.Description};
+  }
+`
+const ItemL = styled.option`
+  color: ${(props) => props.theme.Description};
+`
 const Header = ({ toggle, setToggle }) => {
   const { handleLanguage } = useContext(LanguageContext)
   return (
@@ -80,15 +98,15 @@ const Header = ({ toggle, setToggle }) => {
           {listMenu.map((item) => (
             <li key={item.id}>
               <Links href={item.link} onChange={() => setToggle(!toggle)}>
-                <Icon>#</Icon>
+                <span>#</span>
                 {item.title}
               </Links>
             </li>
           ))}
-          <select name='language' onClick={handleLanguage}>
-            <option value='es'>ES</option>
-            <option value='en'>EN</option>
-          </select>
+          <MenuLanguage name='language' onClick={handleLanguage}>
+            <ItemL value='es'>ES</ItemL>
+            <ItemL value='en'>EN</ItemL>
+          </MenuLanguage>
           <Close
             show={toggle}
             className='uil uil-times'
