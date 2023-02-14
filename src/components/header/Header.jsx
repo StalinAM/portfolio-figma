@@ -81,12 +81,12 @@ const MenuLanguage = styled.select`
   &:focus-visible {
     outline: none;
   }
+  @media screen and (max-width: 768px) {
+    font-size: 1.7rem;
+  }
   option {
     color: ${(props) => props.theme.Description};
   }
-`
-const ItemL = styled.option`
-  color: ${(props) => props.theme.Description};
 `
 const Header = ({ toggle, setToggle }) => {
   const { handleLanguage } = useContext(LanguageContext)
@@ -104,8 +104,8 @@ const Header = ({ toggle, setToggle }) => {
             </li>
           ))}
           <MenuLanguage name='language' onClick={handleLanguage}>
-            <ItemL value='es'>ES</ItemL>
-            <ItemL value='en'>EN</ItemL>
+            <option value='es'>ES</option>
+            <option value='en'>EN</option>
           </MenuLanguage>
           <Close
             show={toggle}
