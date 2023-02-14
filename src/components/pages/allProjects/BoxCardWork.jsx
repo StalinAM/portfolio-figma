@@ -24,7 +24,7 @@ function BoxCardWork({ listProjects }) {
           description={item.description}
           web={item.web}
           tools={item.tools}
-          github={item.github}
+          github={item.repository}
         />
       ))}
     </Content>
