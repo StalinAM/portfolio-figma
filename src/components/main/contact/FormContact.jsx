@@ -1,6 +1,7 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 import styled from 'styled-components'
 import emailjs from '@emailjs/browser'
+import { LanguageContext } from '../../../context/Language'
 const FormC = styled.form`
   width: 360px;
   display: flex;
@@ -35,7 +36,7 @@ const InputProject = styled.textarea`
   outline: none;
 `
 const ButtomForm = styled.button`
-  width: 10rem;
+  width: 11rem;
   padding: 0.5rem 1rem;
   font-weight: 500;
   color: ${(props) => props.theme.Subtitle};
@@ -49,7 +50,7 @@ const ButtomForm = styled.button`
 `
 function FormContact() {
   const form = useRef()
-
+  const { texts } = useContext(LanguageContext)
   const sendEmail = (e) => {
     e.preventDefault()
 
@@ -63,15 +64,15 @@ function FormContact() {
   }
   return (
     <FormC ref={form} onSubmit={sendEmail}>
-      <Input type='text' name='name' placeholder='Insert your name' />
-      <Input type='email' name='email' placeholder='Insert your email' />
+      <Input type='text' name='name' placeholder={texts.contact.name} />
+      <Input type='email' name='email' placeholder={texts.contact.email} />
       <InputProject
         name='project'
         cols={30}
         rows={10}
-        placeholder='Write your massage'
+        placeholder={texts.contact.message}
       />
-      <ButtomForm href='#contact'>Send Message</ButtomForm>
+      <ButtomForm href='#contact'>{texts.contact.botton}</ButtomForm>
     </FormC>
   )
 }

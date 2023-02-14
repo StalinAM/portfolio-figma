@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { LanguageContext } from '../../../context/Language'
 const Info = styled.div`
   justify-items: start;
   display: grid;
@@ -11,6 +12,10 @@ const Title = styled.h1`
   font-weight: 600;
   font-size: 3rem;
   color: ${(props) => props.theme.Title};
+  span {
+    font-size: 2rem;
+    color: ${(props) => props.theme.Subtitle};
+  }
 `
 const Description = styled.p`
   font-size: 1rem;
@@ -27,22 +32,16 @@ const Btn = styled.a`
     background-color: ${(props) => props.theme.Hover};
   }
 `
-const TitleSpan = styled.span`
-  font-size: 2rem;
-  color: ${(props) => props.theme.Subtitle};
-`
 function DataPerson() {
+  const { texts } = useContext(LanguageContext)
   return (
     <Info>
       <Title>
-        Stalin Acurio
-        <TitleSpan> Frontend developer</TitleSpan>
+        {texts.about.name}
+        <span> {texts.about.position}</span>
       </Title>
-      <Description>
-        I'm excited to work on projects from the ground up and see them running
-        in a browser.
-      </Description>
-      <Btn href='#contact'>Contact me!</Btn>
+      <Description>{texts.about.description}</Description>
+      <Btn href='#contact'>{texts.span.home}</Btn>
     </Info>
   )
 }
