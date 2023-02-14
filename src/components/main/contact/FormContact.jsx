@@ -43,7 +43,6 @@ const ButtomForm = styled.button`
   font-size: 1rem;
   font-weight: 500;
   border: 1px solid ${(props) => props.theme.Title};
-  font-family: 'Fira Code', monospace;
   &:hover {
     background-color: ${(props) => props.theme.Hover};
   }
