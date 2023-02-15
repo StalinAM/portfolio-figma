@@ -8,7 +8,10 @@ const frontend = [
 ]
 
 const backend = [
-  { id: 1, name: 'Git' },
+  {
+    id: 1,
+    name: 'Git'
+  },
   { id: 2, name: 'Express' },
   { id: 3, name: 'MongoDB' },
   { id: 4, name: 'Next.js' }
