@@ -18,6 +18,21 @@
       "title": "apps-webs",
       "listProjectComplete": [
         {
+          "id": 11,
+          "image": "https://i.ibb.co/C5C6c9Y/Easy-Money.webp",
+          "title": "EasyMoney",
+          "description": "Personal finance web app, designed to simplify money management, allows you to quickly and easily keep track of expenses and helps you save.",
+          "tools": [
+            "React.js",
+            "Firebase",
+            "React Router",
+            "Styled-components"
+          ],
+          "category": "complete",
+          "web": "https://easy-money-app.vercel.app/",
+          "repository": "https://github.com/StalinAM/easy-money-app.git"
+        },
+        {
           "id": 10,
           "image": "https://i.ibb.co/WfwD6Xw/project10.webp",
           "title": "Hydra",
