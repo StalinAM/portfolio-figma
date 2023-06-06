@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
     body{
         overflow-x: hidden;
         font-family: 'Fira Code', monospace;
-        background-color: #282C33;
+        background-color: ${(props) => props.theme.Background};
         @media screen and (max-width: 768px) {
             overflow-y: ${(props) => (props.toggle ? 'hidden' : '')};
         }
