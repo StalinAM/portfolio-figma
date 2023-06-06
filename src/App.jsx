@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components'
 import { useState } from 'react'
-import { DarkTheme } from './style/Theme'
+import { dark, light } from './style/Theme'
 import Main from './components/main/Main'
 import GlobalStyles from './style/GlobalStyles'
 import Header from './components/header/Header'
@@ -9,19 +9,26 @@ import AllProjects from './components/pages/AllProjects'
 import { Routes, Route } from 'react-router-dom'
 import ScrollUp from './components/ScrollUp'
 import Social from './components/Social'
+import useThemeMode from './hooks/useThemeMode'
 
 function App() {
+  const [theme, toggleTheme] = useThemeMode()
   const [toggle, setToggle] = useState(false)
   return (
     <>
-      <GlobalStyles toggle={toggle} />
-      <ThemeProvider theme={DarkTheme}>
+      <GlobalStyles theme={theme === 'dark' ? dark : light} />
+      <ThemeProvider theme={theme === 'dark' ? dark : light}>
         <Routes>
           <Route
             path='/'
             element={
               <>
-                <Header toggle={toggle} setToggle={setToggle} />
+                <Header
+                  toggle={toggle}
+                  setToggle={setToggle}
+                  toggleTheme={toggleTheme}
+                  theme={theme}
+                />
                 <Main toggle={toggle} setToggle={setToggle} />
               </>
             }
