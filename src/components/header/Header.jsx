@@ -19,6 +19,7 @@ const LogoImg = styled.img`
 `
 const List = styled.ul`
   display: flex;
+  align-items: center;
   gap: 2.3rem;
   z-index: 101;
   @media screen and (max-width: 768px) {
@@ -89,6 +90,11 @@ const Close = styled.i`
     top: 2.5rem;
   }
 `
+const Theme = styled.button`
+  color: ${(props) => props.theme.Title};
+  font-size: 2rem;
+  background: none;
+`
 const MenuLanguage = styled.select`
   background: ${(props) => props.theme.Background};
   border: none;
@@ -107,7 +113,7 @@ const MenuLanguage = styled.select`
     color: ${(props) => props.theme.Description};
   }
 `
-const Header = ({ toggle, setToggle }) => {
+const Header = ({ toggle, setToggle, toggleTheme, theme }) => {
   const { handleLanguage, texts } = useContext(LanguageContext)
   return (
     <HeaderC>
@@ -130,6 +136,9 @@ const Header = ({ toggle, setToggle }) => {
             className='uil uil-times'
             onClick={() => setToggle(!toggle)}
           />
+          <Theme onClick={toggleTheme}>
+            <i className={theme === 'dark' ? 'uil uil-sun' : 'uil uil-moon'} />
+          </Theme>
         </List>
         <Open className='uil uil-bars' onClick={() => setToggle(!toggle)} />
       </Nav>
