@@ -3,6 +3,41 @@ import styled from 'styled-components'
 import logo from '../../assets/logo.svg'
 import { LanguageContext } from '../../context/Language'
 
+const Header = ({ toggle, setToggle, toggleTheme, theme }) => {
+  const { handleLanguage, texts } = useContext(LanguageContext)
+  return (
+    <HeaderC>
+      <Nav>
+        <img src={logo} alt='SVAM logo' />
+        <List show={toggle}>
+          {texts.header.listMenu.map((item) => (
+            <li key={item.id}>
+              <Links href={item.link} onChange={() => setToggle(!toggle)}>
+                <span>{item.title}</span>
+              </Links>
+            </li>
+          ))}
+          <MenuLanguage name='language' onClick={handleLanguage}>
+            <option value='es'>ES</option>
+            <option value='en'>EN</option>
+          </MenuLanguage>
+          <Close
+            show={toggle}
+            className='uil uil-times'
+            onClick={() => setToggle(!toggle)}
+          />
+          <Theme onClick={toggleTheme}>
+            <i className={theme === 'dark' ? 'uil uil-sun' : 'uil uil-moon'} />
+          </Theme>
+        </List>
+        <Open className='uil uil-bars' onClick={() => setToggle(!toggle)} />
+      </Nav>
+    </HeaderC>
+  )
+}
+
+export default Header
+
 const HeaderC = styled.header`
   padding: 2.5rem 2.5rem 0;
 `
@@ -13,9 +48,9 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-`
-const LogoImg = styled.img`
-  width: 3rem;
+  img {
+    width: 3rem;
+  }
 `
 const List = styled.ul`
   display: flex;
@@ -113,37 +148,3 @@ const MenuLanguage = styled.select`
     color: ${(props) => props.theme.Description};
   }
 `
-const Header = ({ toggle, setToggle, toggleTheme, theme }) => {
-  const { handleLanguage, texts } = useContext(LanguageContext)
-  return (
-    <HeaderC>
-      <Nav>
-        <LogoImg src={logo} alt='SVAM logo' />
-        <List show={toggle}>
-          {texts.header.listMenu.map((item) => (
-            <li key={item.id}>
-              <Links href={item.link} onChange={() => setToggle(!toggle)}>
-                <span>{item.title}</span>
-              </Links>
-            </li>
-          ))}
-          <MenuLanguage name='language' onClick={handleLanguage}>
-            <option value='es'>ES</option>
-            <option value='en'>EN</option>
-          </MenuLanguage>
-          <Close
-            show={toggle}
-            className='uil uil-times'
-            onClick={() => setToggle(!toggle)}
-          />
-          <Theme onClick={toggleTheme}>
-            <i className={theme === 'dark' ? 'uil uil-sun' : 'uil uil-moon'} />
-          </Theme>
-        </List>
-        <Open className='uil uil-bars' onClick={() => setToggle(!toggle)} />
-      </Nav>
-    </HeaderC>
-  )
-}
-
-export default Header
