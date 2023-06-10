@@ -1,6 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
 
+function Social() {
+  return (
+    <Container>
+      <Icon
+        href='https://www.linkedin.com/in/stalin-acurio-915561248/'
+        target='_blank'
+        aria-label='Linkedin Link'
+      >
+        <i className='uil uil-linkedin' />
+      </Icon>
+      <Icon
+        href='https://github.com/StalinAM'
+        target='_blank'
+        aria-label='Github Link'
+      >
+        <i className='uil uil-github' />
+      </Icon>
+      <Line />
+    </Container>
+  )
+}
+
+export default Social
+
 const Container = styled.div`
   position: fixed;
   left: 2.5rem;
@@ -34,27 +58,3 @@ const Icon = styled.a`
     transform: translateY(-0.3rem);
   }
 `
-
-function Social() {
-  return (
-    <Container>
-      <Icon
-        href='https://www.linkedin.com/in/stalin-acurio-915561248/'
-        target='_blank'
-        aria-label='Linkedin Link'
-      >
-        <i className='uil uil-linkedin' />
-      </Icon>
-      <Icon
-        href='https://github.com/StalinAM'
-        target='_blank'
-        aria-label='Github Link'
-      >
-        <i className='uil uil-github' />
-      </Icon>
-      <Line />
-    </Container>
-  )
-}
-
-export default Social

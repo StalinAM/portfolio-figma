@@ -4,34 +4,6 @@ import Title from '../../subComponents/Title'
 import imageHome from '../../../assets/about.png'
 import { Container } from '../../subComponents/Container'
 
-const Content = styled.div`
-  max-width: ${(props) => props.theme.WidthSection};
-  margin: 3rem auto 0;
-  display: grid;
-  gap: 2.5rem;
-  justify-items: center;
-  align-items: center;
-  grid-template-columns: repeat(2, 1fr);
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-`
-const Text = styled.p`
-  font-size: 1rem;
-  color: ${(props) => props.theme.Description};
-`
-const TextLink = styled.a`
-  color: ${(props) => props.theme.Title};
-`
-const Left = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: flex-start;
-`
-const ImageHome = styled.img`
-  width: 100%;
-`
 function About() {
   return (
     <Container id='about'>
@@ -65,3 +37,32 @@ function About() {
 }
 
 export default About
+
+const Content = styled.div`
+  max-width: ${(props) => props.theme.WidthSection};
+  margin: 3rem auto 0;
+  display: grid;
+  gap: 2.5rem;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`
+const Text = styled.p`
+  font-size: 1rem;
+  color: ${(props) => props.theme.Description};
+`
+const TextLink = styled.a`
+  color: ${(props) => props.theme.Title};
+`
+const Left = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+`
+const ImageHome = styled.img`
+  width: 100%;
+`

@@ -1,6 +1,23 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { LanguageContext } from '../../../context/Language'
+
+function DataPerson() {
+  const { texts } = useContext(LanguageContext)
+  return (
+    <Info>
+      <Title>
+        {texts.about.name}
+        <span> {texts.about.position}</span>
+      </Title>
+      <Description>{texts.about.description}</Description>
+      <Btn href='#contact'>{texts.span.home}</Btn>
+    </Info>
+  )
+}
+
+export default DataPerson
+
 const Info = styled.div`
   justify-items: start;
   display: grid;
@@ -32,18 +49,3 @@ const Btn = styled.a`
     background-color: ${(props) => props.theme.Hover};
   }
 `
-function DataPerson() {
-  const { texts } = useContext(LanguageContext)
-  return (
-    <Info>
-      <Title>
-        {texts.about.name}
-        <span> {texts.about.position}</span>
-      </Title>
-      <Description>{texts.about.description}</Description>
-      <Btn href='#contact'>{texts.span.home}</Btn>
-    </Info>
-  )
-}
-
-export default DataPerson
