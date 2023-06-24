@@ -7,10 +7,10 @@ export const dark = {
   Hover: 'hsl(45deg 100% 51% / 20%)'
 }
 export const light = {
-  Title: 'hsl(48, 96%, 53%)',
+  Title: '#f5a507',
   Subtitle: 'rgb(34, 42, 53)',
   Description: '#747474',
   Background: '#ffffff',
   WidthSection: '65rem',
-  Hover: 'rgb(255, 193, 5)'
+  Hover: '#f5a507'
 }
