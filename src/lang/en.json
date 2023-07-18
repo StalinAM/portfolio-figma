@@ -18,6 +18,21 @@
       "title": "apps-webs",
       "listProjectComplete": [
         {
+          "id": 12,
+          "image": "https://i.ibb.co/ThSCKNB/Dise-o-sin-t-tulo.png",
+          "title": "Daniks Shop",
+          "description": "Online store application that allows users to make purchases and redirects them to WhatsApp with the details of the selected products.",
+          "tools": [
+            "React.js",
+            "Firebase",
+            "React Router",
+            "Styled-components"
+          ],
+          "category": "complete",
+          "web": "https://github.com/StalinAM/product_catalog",
+          "repository": "https://github.com/StalinAM/product_catalog"
+        },
+        {
           "id": 11,
           "image": "https://i.ibb.co/C5C6c9Y/Easy-Money.webp",
           "title": "EasyMoney",
