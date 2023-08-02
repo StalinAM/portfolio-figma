@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import '@fontsource-variable/fira-code'
 const GlobalStyles = createGlobalStyle`
     *,*::before,*::after{
         box-sizing: border-box;
@@ -10,14 +11,14 @@ const GlobalStyles = createGlobalStyle`
     }
     body{
         overflow-x: hidden;
-        font-family: 'Fira Code', monospace;
+        font-family: 'Fira Code Variable', sans-serif;
         background-color: ${(props) => props.theme.Background};
         @media screen and (max-width: 768px) {
             overflow-y: ${(props) => (props.toggle ? 'hidden' : '')};
         }
     }
     input, textarea, select, button{
-        font-family: 'Fira Code', monospace;
+        font-family: 'Fira Code Variable', sans-serif;
     }
     h1,h2,h3,h4,h5,h6{
         margin: 0;
