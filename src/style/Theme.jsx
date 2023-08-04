@@ -10,7 +10,7 @@ export const light = {
   Title: '#f5a507',
   Subtitle: 'rgb(34, 42, 53)',
   Description: '#747474',
-  Background: '#ffffff',
+  Background: '#fefff1',
   WidthSection: '65rem',
   Hover: '#f5a507'
 }

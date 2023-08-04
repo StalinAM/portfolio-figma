@@ -3,15 +3,16 @@ import styled from 'styled-components'
 import emailjs from '@emailjs/browser'
 import { LanguageContext } from '../../../context/Language'
 const FormC = styled.form`
-  width: 360px;
+  width: 440px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   @media screen and (max-width: 48rem) {
+    width: 360px;
     margin: 0 auto;
   }
   @media screen and (max-width: 36rem) {
-    width: 100%;
+    width: 325px;
   }
 `
 const Input = styled.input`
