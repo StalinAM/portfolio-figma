@@ -15,7 +15,7 @@ const Content = styled.article`
 `
 const ImageHome = styled.img`
   width: 100%;
-  aspect-ratio: attr(520) / attr(520);
+  height: auto;
 `
 function Home() {
   return (
@@ -24,6 +24,8 @@ function Home() {
         <DataPerson />
         <ImageHome
           src={imageHome}
+          width='520'
+          height='520'
           alt='illustration of Stalin who is in front of a laptop where he programs'
         />
       </Content>
