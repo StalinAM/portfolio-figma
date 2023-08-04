@@ -29,8 +29,6 @@ function About() {
         </Left>
         <ImageHome
           src={imageHome}
-          width='520'
-          height='520'
           alt='illustration of Stalin who is in front of a laptop where he programs'
         />
       </Content>
