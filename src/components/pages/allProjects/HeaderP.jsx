@@ -30,7 +30,6 @@ const Description = styled.p`
   font-size: 1rem;
   color: ${(props) => props.theme.Description};
 `
-const Arrow = styled.i``
 const BtnBack = styled(Link)`
   width: fit-content;
   display: flex;
@@ -41,8 +40,11 @@ const BtnBack = styled(Link)`
   &:hover {
     background-color: ${(props) => props.theme.Hover};
   }
-  &:hover ${Arrow} {
+  &:hover svg {
     transform: translate(-0.3rem);
+  }
+  svg {
+    width: 12px;
   }
 `
 const Right = styled.div`
@@ -55,7 +57,13 @@ function HeaderP() {
   return (
     <Container id='header'>
       <BtnBack to='/'>
-        <Arrow className='uil uil-arrow-left' />
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='currentColor'
+          viewBox='0 0 12 14'
+        >
+          <path d='M11 6H3.41l3.3-3.29a1.004 1.004 0 0 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a.998.998 0 0 0 1.42 0 .999.999 0 0 0 0-1.42L3.41 8H11a1 1 0 1 0 0-2Z' />
+        </svg>
         {texts.span.button}
       </BtnBack>
       <Right>

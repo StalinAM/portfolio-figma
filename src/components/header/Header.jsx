@@ -36,16 +36,47 @@ const Header = ({ toggle, setToggle, toggleTheme, theme }) => {
             <option value='es'>ES</option>
             <option value='en'>EN</option>
           </MenuLanguage>
-          <Close
-            show={toggle}
-            className='uil uil-times'
-            onClick={() => setToggle(!toggle)}
-          />
+          <Close show={toggle} onClick={() => setToggle(!toggle)}>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='currentColor'
+              viewBox='0 0 14 14'
+            >
+              <path d='m8.41 7 4.3-4.29a1.004 1.004 0 1 0-1.42-1.42L7 5.59l-4.29-4.3a1.004 1.004 0 0 0-1.42 1.42L5.59 7l-4.3 4.29a1 1 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219L7 8.41l4.29 4.3a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L8.41 7Z' />
+            </svg>
+          </Close>
           <Theme onClick={toggleTheme}>
-            <i className={theme === 'dark' ? 'uil uil-sun' : 'uil uil-moon'} />
+            {theme === 'dark' ? (
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='currentColor'
+                viewBox='0 0 20 20'
+              >
+                <path d='m3.64 15-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 3.64 15ZM3 10a1 1 0 0 0-1-1H1a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm7-7a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1ZM3.64 5.05a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1 1 0 0 0-1.41 1.41l.71.71Zm12 .29a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.64.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29h-.02ZM19 9h-1a1 1 0 1 0 0 2h1a1 1 0 0 0 0-2Zm-9 8a1 1 0 0 0-1 1v1a1 1 0 1 0 2 0v-1a1 1 0 0 0-1-1Zm6.36-2A1 1 0 0 0 15 16.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM10 4.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 10 4.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z' />
+              </svg>
+            ) : (
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='currentColor'
+                viewBox='0 0 21 20'
+              >
+                <path d='M19.64 11a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 6 .36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 5.08 3.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z' />
+              </svg>
+            )}
           </Theme>
         </List>
-        <Open className='uil uil-bars' onClick={() => setToggle(!toggle)} />
+        <Open onClick={() => setToggle(!toggle)}>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 20 12'
+          >
+            <path
+              fill='#000'
+              d='M1 2h18a1 1 0 1 0 0-2H1a1 1 0 0 0 0 2Zm18 8H1a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H1a1 1 0 0 0 0 2h18a1 1 0 1 0 0-2Z'
+            />
+          </svg>
+        </Open>
       </Nav>
     </HeaderC>
   )
@@ -122,29 +153,37 @@ const Links = styled.a`
   @media screen and (max-width: 768px) {
     font-size: 1.7rem;
     &::before {
-      left: -30px;
+      left: -20px;
     }
     &::after {
-      left: -16px;
+      right: -30px;
     }
   }
 `
-const Open = styled.i`
+const Open = styled.button`
   cursor: pointer;
   display: none;
+  background: none;
   @media screen and (max-width: 768px) {
-    display: block;
-    color: ${(props) => props.theme.Subtitle};
-    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    svg {
+      color: ${(props) => props.theme.Subtitle};
+      width: 40px;
+    }
   }
 `
-const Close = styled.i`
+const Close = styled.button`
   cursor: pointer;
   display: none;
-  color: ${(props) => props.theme.Subtitle};
-  font-size: 3rem;
+  svg {
+    color: ${(props) => props.theme.Subtitle};
+    width: 30px;
+  }
+  background: none;
   @media screen and (max-width: 768px) {
-    display: ${(props) => (props.show ? 'block' : 'none')};
+    display: ${(props) => (props.show ? 'flex' : 'none')};
+    align-items: center;
     position: absolute;
     right: 2.5rem;
     top: 2.5rem;
@@ -152,8 +191,17 @@ const Close = styled.i`
 `
 const Theme = styled.button`
   color: ${(props) => props.theme.Title};
-  font-size: 2rem;
   background: none;
+  display: flex;
+  align-items: center;
+  svg {
+    width: 26px;
+  }
+  @media screen and (max-width: 768px) {
+    svg {
+      width: 30px;
+    }
+  }
 `
 const MenuLanguage = styled.select`
   background: ${(props) => props.theme.Background};
