@@ -13,6 +13,7 @@ const Container = styled.li`
 `
 const ImgProject = styled.img`
   width: 100%;
+  height: auto;
 `
 const Content = styled.div`
   display: flex;
@@ -73,17 +74,25 @@ function WorkCard({ id, image, title, description, web, tools, github }) {
   return (
     <Container key={id}>
       {image && (
-        <ImgProject src={image} width={324} height='auto' alt={description} />
+        <ImgProject src={image} width={324} height={200} alt={description} />
       )}
       <Content>
         <Details>
           <Title>
             {title}
-            <LinkLive href={web} target='_blank' />
+            <LinkLive
+              aria-label='Visit the page of the finished project.'
+              href={web}
+              target='_blank'
+            />
           </Title>
           <Description>{description}</Description>
           <BtnC>
-            <IconGit href={github} aria-label='Github Link' target='_blank'>
+            <IconGit
+              aria-label='Visit project repository on GitHub.'
+              href={github}
+              target='_blank'
+            >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='currentColor'
