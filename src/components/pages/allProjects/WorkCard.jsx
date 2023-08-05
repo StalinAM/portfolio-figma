@@ -72,7 +72,9 @@ const IconGit = styled.a`
 function WorkCard({ id, image, title, description, web, tools, github }) {
   return (
     <Container key={id}>
-      {image && <ImgProject src={image} alt={description} />}
+      {image && (
+        <ImgProject src={image} width={324} height='auto' alt={description} />
+      )}
       <Content>
         <Details>
           <Title>
