@@ -36,7 +36,11 @@ const Header = ({ toggle, setToggle, toggleTheme, theme }) => {
             <option value='es'>ES</option>
             <option value='en'>EN</option>
           </MenuLanguage>
-          <Close show={toggle} onClick={() => setToggle(!toggle)}>
+          <Close
+            aria-label='Close menu'
+            show={toggle}
+            onClick={() => setToggle(!toggle)}
+          >
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='currentColor'
@@ -65,7 +69,7 @@ const Header = ({ toggle, setToggle, toggleTheme, theme }) => {
             )}
           </Theme>
         </List>
-        <Open onClick={() => setToggle(!toggle)}>
+        <Open aria-label='open menu' onClick={() => setToggle(!toggle)}>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
